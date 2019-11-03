@@ -31,6 +31,8 @@ namespace InfoAboutPass
 
                 }
 
+                SystemArgs.PrintLog($"Получена пустое значение логина");
+
                 return;
             }
 
@@ -45,6 +47,8 @@ namespace InfoAboutPass
 
                 }
 
+                SystemArgs.PrintLog($"Получена пустое значение пароля");
+
                 return;
             }
 
@@ -52,6 +56,8 @@ namespace InfoAboutPass
             {
                 Directory.CreateDirectory($@"{SystemPath.DataReg}\{NameUser}");
                 Directory.CreateDirectory($@"{SystemPath.DataUSers}\{NameUser}");
+
+                SystemArgs.PrintLog($"Директория пользователя {SystemArgs.CurrentUser} создана");
             }
             else
             {
@@ -63,6 +69,8 @@ namespace InfoAboutPass
                 {
 
                 }
+
+                SystemArgs.PrintLog($"Пользователь существует");
 
                 return;
             }
@@ -81,6 +89,8 @@ namespace InfoAboutPass
             {
 
             }
+
+            SystemArgs.PrintLog($"Пользователь успешно зарегистрирован");
         }
     }
 }

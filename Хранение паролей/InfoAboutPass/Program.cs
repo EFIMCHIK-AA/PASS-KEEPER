@@ -19,12 +19,14 @@ namespace InfoAboutPass
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            #region Форма загрузки
+            #region Форма загрузки и проверка файлов
 
             MainLoad Load = new MainLoad();
+
             Load.Show();
 
-            Thread.Sleep(5000);
+            Thread.Sleep(2500);
+            Load.Close();
 
             #endregion
 

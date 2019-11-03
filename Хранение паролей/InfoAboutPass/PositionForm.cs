@@ -38,18 +38,18 @@ namespace InfoAboutPass
         {
             if(DialogResult == DialogResult.OK)
             {
-                String error = "";
+                String error = String.Empty;
 
                 try
                 {
-                    if (Name_TB.Text.Trim() == "")
+                    if (Name_TB.Text.Trim() == String.Empty)
                     {
                         Name_TB.Focus();
                         error = "Необходимо ввести наименование позиции";
                         throw new Exception(error);
                     }
 
-                    if (Pass_TB.Text.Trim() == "")
+                    if (Pass_TB.Text.Trim() == String.Empty)
                     {
                         Pass_TB.Focus();
                         error = "Необходимо ввеситм пароль позиции";
@@ -71,6 +71,7 @@ namespace InfoAboutPass
                 }
             }
         }
+
 
         private void PositionForm_MouseMove(object sender, MouseEventArgs e)
         {

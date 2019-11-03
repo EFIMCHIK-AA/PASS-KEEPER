@@ -30,14 +30,14 @@ namespace InfoAboutPass
 
             _CurrentDate = DateTime.Now;
 
-            if(!Directory.Exists($@"{SystemPath.DataLogPath}\{_CurrentDate.ToShortDateString()}"))
+            if(!Directory.Exists($@"{SystemPath.DataLog}\{_CurrentDate.ToShortDateString()}"))
             {
-                Directory.CreateDirectory($@"{SystemPath.DataLogPath}\{_CurrentDate.ToShortDateString()}");
+                Directory.CreateDirectory($@"{SystemPath.DataLog}\{_CurrentDate.ToShortDateString()}");
             }
 
-            if (!File.Exists($@"{SystemPath.DataLogPath}\{_CurrentDate.ToShortDateString()}\{_CurrentDate.ToShortDateString()}.log"))
+            if (!File.Exists($@"{SystemPath.DataLog}\{_CurrentDate.ToShortDateString()}\{_CurrentDate.ToShortDateString()}.log"))
             {
-                using (FileStream fs = File.Create($@"{SystemPath.DataLogPath}\{_CurrentDate.ToShortDateString()}\{_CurrentDate.ToShortDateString()}.log")) { }
+                using (FileStream fs = File.Create($@"{SystemPath.DataLog}\{_CurrentDate.ToShortDateString()}\{_CurrentDate.ToShortDateString()}.log")) { }
             }
         }
 
@@ -55,7 +55,7 @@ namespace InfoAboutPass
         {
             String TempString = $@"{_CurrentDate.ToString()} : {_StringData}" + Environment.NewLine;
 
-            File.AppendAllText($@"{SystemPath.DataLogPath}\{_CurrentDate.ToShortDateString()}\{_CurrentDate.ToShortDateString()}.log", TempString);
+            File.AppendAllText($@"{SystemPath.DataLog}\{_CurrentDate.ToShortDateString()}\{_CurrentDate.ToShortDateString()}.log", TempString);
         }
     }
 }

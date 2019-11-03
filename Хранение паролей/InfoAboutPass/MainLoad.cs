@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,22 +17,16 @@ namespace InfoAboutPass
         public MainLoad()
         {
             InitializeComponent();
-            Timer_T.Start();
         }
 
         private void MainLoad_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void Timer_T_Tick(object sender, EventArgs e)
-        {
-            this.Close();
+            DataFile.CheckFiles();
         }
 
         private void MainLoad_Shown(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

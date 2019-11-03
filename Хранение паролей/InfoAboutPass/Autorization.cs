@@ -23,10 +23,14 @@ namespace InfoAboutPass
         {
             if (Directory.Exists($@"{SystemPath.DataReg}\{Login}"))
             {
+                SystemArgs.PrintLog($"Логин {Login} успешно найден");
+
                 return true;
             }
             else
             {
+                SystemArgs.PrintLog($"Логин {Login} не существует");
+
                 return false;
             }
         }
@@ -57,6 +61,8 @@ namespace InfoAboutPass
 
                             }
 
+                            SystemArgs.PrintLog($"Получен неправильный логин или пароль");
+
                             return false;
                         }
                     }
@@ -70,6 +76,8 @@ namespace InfoAboutPass
                         {
 
                         }
+
+                        SystemArgs.PrintLog($"Получен неправильный логин или пароль");
 
                         return false;
                     }
@@ -85,6 +93,8 @@ namespace InfoAboutPass
                 {
 
                 }
+
+                SystemArgs.PrintLog($"Конфигурационный файл {Login}.hba не найден");
 
                 return false;
             }

@@ -21,6 +21,8 @@ namespace InfoAboutPass
     {
         public static String [] GetAllPositions()
         {
+            SystemArgs.PrintLog($"Процедура получения позиций пользователя => Старт ");
+
             String Data = "";
             String[] PathFiles;
 
@@ -49,6 +51,8 @@ namespace InfoAboutPass
 
                 }
 
+                SystemArgs.PrintLog($"Директория пользователя не найдена");
+
                 return new String[0];
             }
 
@@ -57,9 +61,11 @@ namespace InfoAboutPass
 
         public static Position ToPosition(String Position)
         {
-            String[] Temp = Position.Split('_');
+            String[] Temp = Position.Split('_');// 0 - Дата, 1 - Наименование, 2 - Пароль, 3 - описание, 4 - Ключ шифрования
 
-            return new Position(Convert.ToDateTime(Temp[0]), Temp[1], Temp[2], Temp[3]);
+            String DecoderPassword = Encryption.DecryptRSA(Temp[2], Temp[4]);
+
+            return new Position(Convert.ToDateTime(Temp[0]), Temp[1], DecoderPassword, Temp[3]); // 0 - Дата, 1 - Наименование, 2 - Пароль, 3 - описание
         }
     }
 }

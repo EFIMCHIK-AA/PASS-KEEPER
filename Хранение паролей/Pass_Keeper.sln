@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pass_Keeper", "InfoAboutPass\Pass_Keeper.csproj", "{393788FF-6A6C-4416-BC32-67DA2160D12F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassKeeper_Admin", "PassKeeper_Admin\PassKeeper_Admin.csproj", "{508AB09D-B8D6-45B5-B850-B43A276D1089}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{393788FF-6A6C-4416-BC32-67DA2160D12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393788FF-6A6C-4416-BC32-67DA2160D12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393788FF-6A6C-4416-BC32-67DA2160D12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393788FF-6A6C-4416-BC32-67DA2160D12F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508AB09D-B8D6-45B5-B850-B43A276D1089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508AB09D-B8D6-45B5-B850-B43A276D1089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508AB09D-B8D6-45B5-B850-B43A276D1089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508AB09D-B8D6-45B5-B850-B43A276D1089}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E17CF1E8-89DA-40D3-9B22-0FB4ACE51C93}
+	EndGlobalSection
+EndGlobal

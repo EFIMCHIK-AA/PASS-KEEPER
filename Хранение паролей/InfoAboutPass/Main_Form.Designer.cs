@@ -30,18 +30,22 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.Positions_DGV = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Add_B = new System.Windows.Forms.Button();
             this.Delete_B = new System.Windows.Forms.Button();
             this.Change_B = new System.Windows.Forms.Button();
@@ -56,10 +60,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Back_B = new System.Windows.Forms.Button();
             this.Forward_B = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Positions_DGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Headers_DGV)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +107,44 @@
             this.Positions_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Positions_DGV_CellClick);
             this.Positions_DGV.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Positions_DGV_CellDoubleClick);
             this.Positions_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Positions_DGV_CellFormatting);
+            this.Positions_DGV.SelectionChanged += new System.EventHandler(this.Positions_DGV_SelectionChanged);
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column1.HeaderText = "Дата добавления";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 120;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.HeaderText = "Логин";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 165;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column3.HeaderText = "Пароль";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 165;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column4.HeaderText = "Наименование | Примечание";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 250;
             // 
             // Add_B
             // 
@@ -116,7 +154,7 @@
             this.Add_B.Location = new System.Drawing.Point(13, 81);
             this.Add_B.Name = "Add_B";
             this.Add_B.Size = new System.Drawing.Size(210, 25);
-            this.Add_B.TabIndex = 13;
+            this.Add_B.TabIndex = 1;
             this.Add_B.Text = "Добавить";
             this.Add_B.UseVisualStyleBackColor = false;
             this.Add_B.Click += new System.EventHandler(this.Add_B_Click);
@@ -130,7 +168,7 @@
             this.Delete_B.Location = new System.Drawing.Point(13, 143);
             this.Delete_B.Name = "Delete_B";
             this.Delete_B.Size = new System.Drawing.Size(210, 25);
-            this.Delete_B.TabIndex = 12;
+            this.Delete_B.TabIndex = 3;
             this.Delete_B.Text = "Удалить";
             this.Delete_B.UseVisualStyleBackColor = false;
             this.Delete_B.Click += new System.EventHandler(this.Delete_B_Click);
@@ -138,13 +176,12 @@
             // Change_B
             // 
             this.Change_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.Change_B.Enabled = false;
             this.Change_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Change_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.Change_B.Location = new System.Drawing.Point(13, 112);
             this.Change_B.Name = "Change_B";
             this.Change_B.Size = new System.Drawing.Size(210, 25);
-            this.Change_B.TabIndex = 11;
+            this.Change_B.TabIndex = 2;
             this.Change_B.Text = "Изменить";
             this.Change_B.UseVisualStyleBackColor = false;
             this.Change_B.Click += new System.EventHandler(this.Change_B_Click);
@@ -157,7 +194,7 @@
             this.User_B.Location = new System.Drawing.Point(13, 460);
             this.User_B.Name = "User_B";
             this.User_B.Size = new System.Drawing.Size(210, 25);
-            this.User_B.TabIndex = 15;
+            this.User_B.TabIndex = 5;
             this.User_B.Text = "Пользователь";
             this.User_B.UseVisualStyleBackColor = false;
             this.User_B.Click += new System.EventHandler(this.User_B_Click);
@@ -170,7 +207,7 @@
             this.Program_B.Location = new System.Drawing.Point(13, 429);
             this.Program_B.Name = "Program_B";
             this.Program_B.Size = new System.Drawing.Size(210, 25);
-            this.Program_B.TabIndex = 14;
+            this.Program_B.TabIndex = 4;
             this.Program_B.Text = "О программе";
             this.Program_B.UseVisualStyleBackColor = false;
             this.Program_B.Click += new System.EventHandler(this.Program_B_Click);
@@ -183,7 +220,7 @@
             this.Exit_B.Location = new System.Drawing.Point(13, 565);
             this.Exit_B.Name = "Exit_B";
             this.Exit_B.Size = new System.Drawing.Size(210, 25);
-            this.Exit_B.TabIndex = 17;
+            this.Exit_B.TabIndex = 7;
             this.Exit_B.Text = "Выход";
             this.Exit_B.UseVisualStyleBackColor = false;
             this.Exit_B.Click += new System.EventHandler(this.Exit_B_Click);
@@ -196,7 +233,7 @@
             this.ChangeUser_B.Location = new System.Drawing.Point(13, 534);
             this.ChangeUser_B.Name = "ChangeUser_B";
             this.ChangeUser_B.Size = new System.Drawing.Size(210, 25);
-            this.ChangeUser_B.TabIndex = 16;
+            this.ChangeUser_B.TabIndex = 6;
             this.ChangeUser_B.Text = "Сменить пользователя";
             this.ChangeUser_B.UseVisualStyleBackColor = false;
             this.ChangeUser_B.Click += new System.EventHandler(this.ChangeUser_B_Click);
@@ -241,6 +278,7 @@
             this.Headers_DGV.Size = new System.Drawing.Size(703, 25);
             this.Headers_DGV.TabIndex = 18;
             this.Headers_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Headers_DGV_CellClick);
+            this.Headers_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Headers_DGV_CellContentClick);
             this.Headers_DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Headers_DGV_CellFormatting);
             // 
             // dataGridViewTextBoxColumn1
@@ -251,7 +289,7 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 150;
+            this.dataGridViewTextBoxColumn1.Width = 120;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -261,7 +299,7 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.Width = 150;
+            this.dataGridViewTextBoxColumn2.Width = 165;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -271,7 +309,7 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn3.Width = 150;
+            this.dataGridViewTextBoxColumn3.Width = 165;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -291,7 +329,7 @@
             this.Back_B.Location = new System.Drawing.Point(245, 565);
             this.Back_B.Name = "Back_B";
             this.Back_B.Size = new System.Drawing.Size(350, 25);
-            this.Back_B.TabIndex = 19;
+            this.Back_B.TabIndex = 8;
             this.Back_B.Text = "Предыдущие позиции";
             this.Back_B.UseVisualStyleBackColor = false;
             this.Back_B.Click += new System.EventHandler(this.Back_B_Click);
@@ -304,47 +342,10 @@
             this.Forward_B.Location = new System.Drawing.Point(598, 565);
             this.Forward_B.Name = "Forward_B";
             this.Forward_B.Size = new System.Drawing.Size(350, 25);
-            this.Forward_B.TabIndex = 20;
+            this.Forward_B.TabIndex = 9;
             this.Forward_B.Text = "Следущие позиции";
             this.Forward_B.UseVisualStyleBackColor = false;
             this.Forward_B.Click += new System.EventHandler(this.Forward_B_Click);
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column1.HeaderText = "Дата добавления";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.HeaderText = "Логин";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column3.HeaderText = "Пароль";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column4.HeaderText = "Наименование | Примечание";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 250;
             // 
             // Main_Form
             // 

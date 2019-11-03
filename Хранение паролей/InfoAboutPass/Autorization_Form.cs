@@ -24,6 +24,8 @@ namespace InfoAboutPass
 
         private void Exit_B_Click(object sender, EventArgs e)
         {
+            SystemArgs.PrintLog($"Выход из приложения");
+
             Application.Exit();
         }
 
@@ -33,10 +35,21 @@ namespace InfoAboutPass
 
             this.Hide();
 
-            if(Dialog.ShowDialog() == DialogResult.OK)
+            SystemArgs.PrintLog($"Инициализаия процедуры регистарции пользователя");
+
+            if (Dialog.ShowDialog() == DialogResult.OK)
             {
-                Registrations.SaveUser(Dialog.Login_TB.Text.Trim(), Dialog.Pass_TB.Text.Trim());
+                Registrations.SaveUser(Dialog.Login_TB.Text.Trim(), Hash.GetSHA256(Dialog.Pass_TB.Text.Trim()));
+
+                SystemArgs.PrintLog($"Пользователь успешно зарегистрирован");
             }
+            else
+            {
+                SystemArgs.PrintLog($"Процедура регистрации пользователя отменена");
+            }
+
+            SystemArgs.MainForm.Login_TB.Text = "";
+            SystemArgs.MainForm.Pass_TB.Text = "";
 
             this.Show();
         }
@@ -53,7 +66,7 @@ namespace InfoAboutPass
 
                     if (CurrentPass != "")
                     {
-                        if (Autorization.GetUserStatus(CurrentLogin, CurrentPass))
+                        if (Autorization.GetUserStatus(CurrentLogin, Hash.GetSHA256(CurrentPass)))
                         {
                             SystemArgs.CurrentUser = new User(CurrentLogin);
 
@@ -76,6 +89,8 @@ namespace InfoAboutPass
 
                         }
 
+                        SystemArgs.PrintLog($"Получено пустое поле пароля");
+
                         Pass_TB.Focus();
                         return;
                     }
@@ -90,6 +105,8 @@ namespace InfoAboutPass
                     {
 
                     }
+
+                    SystemArgs.PrintLog($"Введен енправильный логин или пароль");
                 }
             }
             else
@@ -102,6 +119,8 @@ namespace InfoAboutPass
                 {
 
                 }
+
+                SystemArgs.PrintLog($"Получено пустое поле логина");
 
                 Login_TB.Focus();
                 return;

@@ -16,3 +16,21 @@ C:\Users\vipef\OneDrive\Рабочий стол\Хранение паролей\
 C:\Users\vipef\OneDrive\Рабочий стол\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.csproj.CoreCompileInputs.cache
 C:\Users\vipef\OneDrive\Рабочий стол\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.exe
 C:\Users\vipef\OneDrive\Рабочий стол\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\PASS KEEPER.exe.config
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\PASS KEEPER.exe
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\PASS KEEPER.pdb
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.csprojAssemblyReference.cache
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.AboutProg.resources
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.AboutUser.resources
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.Autorization_Form.resources
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.MainLoad.resources
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.Main_Form.resources
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.MessageOneButton.resources
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.MessegeTwoButtons.resources
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.PositionForm.resources
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.Properties.Resources.resources
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.Reg_Form.resources
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.csproj.GenerateResource.cache
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.csproj.CoreCompileInputs.cache
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\PASS KEEPER.exe
+C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\PASS KEEPER.pdb

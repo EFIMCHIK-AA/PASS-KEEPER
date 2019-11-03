@@ -34,8 +34,8 @@
             this.Login_TB = new System.Windows.Forms.TextBox();
             this.Pass_TB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Exit_B = new System.Windows.Forms.Button();
-            this.ChangeUser_B = new System.Windows.Forms.Button();
+            this.Cancel_B = new System.Windows.Forms.Button();
+            this.OK_B = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SeePass_CB
@@ -44,10 +44,11 @@
             this.SeePass_CB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
             this.SeePass_CB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeePass_CB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.SeePass_CB.Location = new System.Drawing.Point(76, 452);
+            this.SeePass_CB.Location = new System.Drawing.Point(101, 556);
+            this.SeePass_CB.Margin = new System.Windows.Forms.Padding(4);
             this.SeePass_CB.Name = "SeePass_CB";
-            this.SeePass_CB.Size = new System.Drawing.Size(111, 17);
-            this.SeePass_CB.TabIndex = 18;
+            this.SeePass_CB.Size = new System.Drawing.Size(139, 21);
+            this.SeePass_CB.TabIndex = 3;
             this.SeePass_CB.Text = "Показать пароль";
             this.SeePass_CB.UseVisualStyleBackColor = false;
             this.SeePass_CB.CheckedChanged += new System.EventHandler(this.SeePass_CB_CheckedChanged);
@@ -57,9 +58,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(18, 429);
+            this.label3.Location = new System.Drawing.Point(24, 528);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 17;
             this.label3.Text = "Пароль";
             // 
@@ -68,66 +70,74 @@
             this.Login_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.Login_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Login_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Login_TB.Location = new System.Drawing.Point(76, 400);
+            this.Login_TB.Location = new System.Drawing.Point(101, 492);
+            this.Login_TB.Margin = new System.Windows.Forms.Padding(4);
             this.Login_TB.Name = "Login_TB";
-            this.Login_TB.Size = new System.Drawing.Size(263, 20);
-            this.Login_TB.TabIndex = 14;
+            this.Login_TB.Size = new System.Drawing.Size(350, 22);
+            this.Login_TB.TabIndex = 1;
             // 
             // Pass_TB
             // 
             this.Pass_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.Pass_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pass_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Pass_TB.Location = new System.Drawing.Point(76, 426);
+            this.Pass_TB.Location = new System.Drawing.Point(101, 524);
+            this.Pass_TB.Margin = new System.Windows.Forms.Padding(4);
             this.Pass_TB.Name = "Pass_TB";
-            this.Pass_TB.Size = new System.Drawing.Size(263, 20);
-            this.Pass_TB.TabIndex = 16;
+            this.Pass_TB.Size = new System.Drawing.Size(350, 22);
+            this.Pass_TB.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(18, 402);
+            this.label1.Location = new System.Drawing.Point(24, 495);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 15;
             this.label1.Text = "Логин";
             // 
-            // Exit_B
+            // Cancel_B
             // 
-            this.Exit_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.Exit_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Exit_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Exit_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Exit_B.Location = new System.Drawing.Point(21, 518);
-            this.Exit_B.Name = "Exit_B";
-            this.Exit_B.Size = new System.Drawing.Size(318, 25);
-            this.Exit_B.TabIndex = 20;
-            this.Exit_B.Text = "Отмена";
-            this.Exit_B.UseVisualStyleBackColor = false;
+            this.Cancel_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.Cancel_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Cancel_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.Cancel_B.Location = new System.Drawing.Point(28, 638);
+            this.Cancel_B.Margin = new System.Windows.Forms.Padding(4);
+            this.Cancel_B.Name = "Cancel_B";
+            this.Cancel_B.Size = new System.Drawing.Size(424, 31);
+            this.Cancel_B.TabIndex = 5;
+            this.Cancel_B.Text = "Отмена";
+            this.Cancel_B.UseVisualStyleBackColor = false;
             // 
-            // ChangeUser_B
+            // OK_B
             // 
-            this.ChangeUser_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.ChangeUser_B.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.ChangeUser_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangeUser_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.ChangeUser_B.Location = new System.Drawing.Point(21, 487);
-            this.ChangeUser_B.Name = "ChangeUser_B";
-            this.ChangeUser_B.Size = new System.Drawing.Size(318, 25);
-            this.ChangeUser_B.TabIndex = 19;
-            this.ChangeUser_B.Text = "Подтвердить";
-            this.ChangeUser_B.UseVisualStyleBackColor = false;
+            this.OK_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.OK_B.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.OK_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OK_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.OK_B.Location = new System.Drawing.Point(28, 599);
+            this.OK_B.Margin = new System.Windows.Forms.Padding(4);
+            this.OK_B.Name = "OK_B";
+            this.OK_B.Size = new System.Drawing.Size(424, 31);
+            this.OK_B.TabIndex = 4;
+            this.OK_B.Text = "Подтвердить";
+            this.OK_B.UseVisualStyleBackColor = false;
+            this.OK_B.Click += new System.EventHandler(this.ChangeUser_B_Click);
             // 
             // Reg_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.OK_B;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InfoAboutPass.Properties.Resources.Регистрация;
-            this.ClientSize = new System.Drawing.Size(361, 602);
-            this.Controls.Add(this.Exit_B);
-            this.Controls.Add(this.ChangeUser_B);
+            this.CancelButton = this.CancelButton;
+            this.ClientSize = new System.Drawing.Size(481, 741);
+            this.Controls.Add(this.Cancel_B);
+            this.Controls.Add(this.OK_B);
             this.Controls.Add(this.SeePass_CB);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Login_TB);
@@ -135,6 +145,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Reg_Form";
@@ -155,7 +166,7 @@
         public System.Windows.Forms.TextBox Login_TB;
         public System.Windows.Forms.TextBox Pass_TB;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Button Exit_B;
-        public System.Windows.Forms.Button ChangeUser_B;
+        public System.Windows.Forms.Button Cancel_B;
+        public System.Windows.Forms.Button OK_B;
     }
 }

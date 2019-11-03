@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace InfoAboutPass
 {
@@ -20,9 +21,11 @@ namespace InfoAboutPass
     {
         public static DateTime CurrentDateFile; //Текущая дата
 
-        public static void SetPosition(DateTime CurrentDate, String Name, String Password, String Descrition)
+        public static void SetPosition(DateTime CurrentDate, String Name, String Password, String Descrition, String KeyEncryption)
         {
-            String Temp = $"{CurrentDate.ToString()}_{Name}_{Password}_{Descrition}"; //Строка для записи
+            String PasswordRSA = Encryption.EncryptRSA(Password, KeyEncryption); //Шифруем
+
+            String Temp = $"{CurrentDate.ToString()}_{Name}_{PasswordRSA}_{Descrition}_{KeyEncryption}"; //Строка для записи
 
             String NameFile = CurrentDate.GetHashCode().ToString(); //Имя будет уникальное в текущей сборке программы
 
@@ -30,6 +33,8 @@ namespace InfoAboutPass
             {
                 sw.WriteLine(Temp);
             }
+
+            SystemArgs.PrintLog($"Позиция пользователя успешно сохранена");
         }
 
         public static void RemovePosition(Position Position)
@@ -60,17 +65,26 @@ namespace InfoAboutPass
                 if (Check)
                 {
                     File.Delete(PathDelete);
+
+                    SystemArgs.PrintLog($"Позиция пользователя успешно удалена");
                 }
+            }
+            else
+            {
+                SystemArgs.PrintLog($"Директория позиций пользователя {SystemArgs.CurrentUser} не найдена");
             }
         }
 
-        public static void ChangePosition(DateTime CurrentDate, String Name, String Password, String Descrition, DateTime LastDate, String LastName)
+        public static void ChangePosition(DateTime CurrentDate, String Name, String Password, String Descrition, DateTime LastDate, String LastName, String KeyEncryption)
         {
-            String Temp = $"{CurrentDate.ToString()}_{Name}_{Password}_{Descrition}"; //Строка для записи
+            String PasswordRSA = Encryption.EncryptRSA(Password, KeyEncryption); //Шифруем
+
+            String Temp = $"{CurrentDate.ToString()}_{Name}_{PasswordRSA}_{Descrition}_{KeyEncryption}"; //Строка для записи
 
             String NameFile = CurrentDate.GetHashCode().ToString(); //Имя будет уникальное в текущей сборке программы
 
             bool Check = false;
+
             String PathChange = String.Empty;
 
             if (Directory.Exists($@"{SystemPath.DataUSers}\{SystemArgs.CurrentUser.Name}"))
@@ -97,8 +111,71 @@ namespace InfoAboutPass
                     using (StreamWriter sw = new StreamWriter(File.Create(PathChange)))
                     {
                         sw.WriteLine(Temp);
+                        SystemArgs.PrintLog($"Позиция пользователя успешно изменена");
                     }
                 }
+            }
+            else
+            {
+                SystemArgs.PrintLog($"Директория позиций пользователя не найдена");
+            }
+        }
+
+        public static void CheckFiles()
+        {
+            try
+            {
+                SystemArgs.PrintLog($"Запуск приложения");
+
+                if (!File.Exists(SystemPath.DataRegPath))
+                {
+                    throw new Exception();
+                }
+
+                if (!File.Exists(SystemPath.DataUSersPath))
+                {
+                    throw new Exception();
+                }
+
+                if (!File.Exists(SystemPath.DataLogPath))
+                {
+                    throw new Exception();
+                }
+
+                SystemPath.GetDataRegPath();
+                SystemPath.GetDataLogPath();
+                SystemPath.GetDataUsersPath();
+
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageOneButton Dialog = new MessageOneButton();
+
+                Dialog.Message_L.Text = "Недостаточно прав для доступа к системным файлам";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Недостаточно прав доступа для корректного запуска программного обеспечения");
+
+                Environment.Exit(0); //Завершение процесса
+            }
+            catch (Exception)
+            {
+                MessageOneButton Dialog = new MessageOneButton();
+
+                Dialog.Message_L.Text = "Файл конфигурации не найден. Выход из приложения";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Файл конфигурации не найден");
+
+                Environment.Exit(0); //Завершение процесса
             }
         }
     }
