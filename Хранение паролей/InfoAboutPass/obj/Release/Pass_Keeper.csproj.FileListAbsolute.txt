@@ -16,3 +16,37 @@ C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хран
 C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\PASS KEEPER.exe
 C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\PASS KEEPER.pdb
 C:\Users\vipef\OneDrive\Рабочий стол\PASS KEEPER\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\Pass_Keeper.csprojAssemblyReference.cache
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\PASS KEEPER.exe.config
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\PASS KEEPER.exe
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\PASS KEEPER.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\AdamsLair.WinForms.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\PopupControl.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\Syncfusion.Core.WinForms.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\Syncfusion.DataSource.WinForms.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\Syncfusion.GridCommon.WinForms.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\Syncfusion.Licensing.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\Syncfusion.Shared.Base.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\AdamsLair.WinForms.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\AdamsLair.WinForms.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\PopupControl.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\Syncfusion.Core.WinForms.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\Syncfusion.DataSource.WinForms.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\Syncfusion.GridCommon.WinForms.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\Syncfusion.Shared.Base.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\Pass_Keeper.csprojAssemblyReference.cache
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.AboutProg.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.AboutUser.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.Autorization_Form.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.MainLoad.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.Main_Form.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.MessageOneButton.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.MessegeTwoButtons.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.PositionForm.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.Properties.Resources.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\InfoAboutPass.Reg_Form.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\Pass_Keeper.csproj.GenerateResource.cache
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\Pass_Keeper.csproj.CopyComplete
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\PASS KEEPER.exe
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Release\PASS KEEPER.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\FastTree.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Release\FastTree.xml

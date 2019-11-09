@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InfoAboutPass
+namespace PassKeeper_Admin
 {
     public partial class Autorization_Form : Form
     {

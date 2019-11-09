@@ -16,7 +16,7 @@ namespace PassKeeper_Admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Autorization_Form());
+            Application.Run(new Main_F());
         }
     }
 }

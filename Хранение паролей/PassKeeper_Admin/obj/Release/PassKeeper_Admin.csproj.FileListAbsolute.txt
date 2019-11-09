@@ -1,0 +1,17 @@
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.csprojAssemblyReference.cache
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.Autorization_Form.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.CreatePass_F.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.Main_F.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.Properties.Resources.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.Question_F.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.csproj.GenerateResource.cache
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Release\PassKeeper_Admin.exe.config
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Release\PassKeeper_Admin.exe
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Release\PassKeeper_Admin.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Release\MaterialSkin.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.csproj.CopyComplete
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.exe
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.MessageOneButton.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.MessegeTwoButtons.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Release\PassKeeper_Admin.PositionForm.resources
