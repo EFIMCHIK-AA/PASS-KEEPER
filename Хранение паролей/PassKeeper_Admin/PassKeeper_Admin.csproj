@@ -68,6 +68,7 @@
       <DependentUpon>CreatePass_F.cs</DependentUpon>
     </Compile>
     <Compile Include="Encryption.cs" />
+    <Compile Include="Hash.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Main_F.cs">
       <SubType>Form</SubType>

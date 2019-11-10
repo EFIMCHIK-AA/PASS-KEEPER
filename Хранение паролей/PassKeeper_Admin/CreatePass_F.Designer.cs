@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.Answer_TB = new System.Windows.Forms.TextBox();
+            this.Password_TB = new System.Windows.Forms.TextBox();
             this.OK_B = new System.Windows.Forms.Button();
             this.Cancel_B = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,15 +45,15 @@
             this.label3.TabIndex = 25;
             this.label3.Text = "Пароль";
             // 
-            // Answer_TB
+            // Password_TB
             // 
-            this.Answer_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
-            this.Answer_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Answer_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Answer_TB.Location = new System.Drawing.Point(89, 336);
-            this.Answer_TB.Name = "Answer_TB";
-            this.Answer_TB.Size = new System.Drawing.Size(387, 20);
-            this.Answer_TB.TabIndex = 23;
+            this.Password_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
+            this.Password_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Password_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.Password_TB.Location = new System.Drawing.Point(89, 336);
+            this.Password_TB.Name = "Password_TB";
+            this.Password_TB.Size = new System.Drawing.Size(387, 20);
+            this.Password_TB.TabIndex = 23;
             // 
             // OK_B
             // 
@@ -88,7 +88,7 @@
             this.ClientSize = new System.Drawing.Size(510, 450);
             this.Controls.Add(this.Cancel_B);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Answer_TB);
+            this.Controls.Add(this.Password_TB);
             this.Controls.Add(this.OK_B);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -105,7 +105,7 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox Answer_TB;
+        public System.Windows.Forms.TextBox Password_TB;
         public System.Windows.Forms.Button OK_B;
         public System.Windows.Forms.Button Cancel_B;
     }

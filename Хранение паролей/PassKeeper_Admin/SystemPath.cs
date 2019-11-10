@@ -24,6 +24,9 @@ namespace PassKeeper_Admin
         public static String DataUSers = String.Empty; //Место хранения списка позиций каждого пользователя
         public static String DataLogPath = @"System\Path\DataLog.conf"; //Файл, содержащий место записи логов
         public static String DataLog = String.Empty; //Директория с записи логов
+        public static String FirstEntancePath = @"System\Path\Entrance.conf"; //Информация о первом входе
+        public static String AnswerPath = @"System\Path\Answer.conf"; //Секретный вопрос
+        public static String PassAppPath = @"System\Path\Password.conf";//Пароль от приложения
 
         public static void GetDataRegPath()
         {
@@ -32,6 +35,32 @@ namespace PassKeeper_Admin
                 using (StreamReader sr = new StreamReader(File.Open(DataRegPath, FileMode.Open)))
                 {
                     DataReg = sr.ReadLine();
+                }
+            }
+            else
+            {
+                MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                Dialog.Message_L.Text = "Файл DateReg.conf не обнаружен";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Файл DataReg.conf не найден");
+
+                return;
+            }
+        }
+
+        public static void SetDataRegPath(String Path)
+        {
+            if (File.Exists(DataRegPath))
+            {
+                using (StreamWriter sw = new StreamWriter(File.Open(DataRegPath, FileMode.OpenOrCreate)))
+                {
+                    sw.WriteLine(Path);
                 }
             }
             else
@@ -77,6 +106,32 @@ namespace PassKeeper_Admin
             }
         }
 
+        public static void SetDataUsersPath(String Path)
+        {
+            if (File.Exists(DataUSersPath))
+            {
+                using (StreamWriter sw = new StreamWriter(File.Open(DataUSersPath, FileMode.OpenOrCreate)))
+                {
+                    sw.WriteLine();
+                }
+            }
+            else
+            {
+                MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                Dialog.Message_L.Text = "Файл DateUsers.conf не обнаружен";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Файл DataReg.conf не найден");
+
+                return;
+            }
+        }
+
         public static void GetDataLogPath()
         {
             if (File.Exists(DataLogPath))
@@ -100,6 +155,188 @@ namespace PassKeeper_Admin
                 SystemArgs.PrintLog($"Файл DataLog.conf не найден");
 
                 return;
+            }
+        }
+
+        public static void GetEntrance()
+        {
+            if (File.Exists(FirstEntancePath))
+            {
+                using (StreamReader sr = new StreamReader(File.Open(FirstEntancePath, FileMode.Open)))
+                {
+                    String Temp = sr.ReadLine();
+
+                    if (Temp == "true")
+                    {
+                        SystemArgs.FirstEntrance = true;
+                    }
+                    else
+                    {
+                        SystemArgs.FirstEntrance = false;
+                    }
+                }
+            }
+            else
+            {
+                MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                Dialog.Message_L.Text = "Файл Entrance.conf не обнаружен";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Файл Entrance.conf не найден");
+
+                return;
+            }
+        }
+
+        public static void SetEntrance(bool flag)
+        {
+            if (File.Exists(FirstEntancePath))
+            {
+                using (StreamWriter sr = new StreamWriter(File.Open(FirstEntancePath, FileMode.OpenOrCreate)))
+                {
+                    if (flag)
+                    {
+                        sr.WriteLine("true");
+                    }
+                    else
+                    {
+                        sr.WriteLine("false");
+                    }
+                }
+            }
+            else
+            {
+                MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                Dialog.Message_L.Text = "Файл Entrance.conf не обнаружен";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Файл Entrance.conf не найден");
+
+                return;
+            }
+        }
+
+        public static void SetAnswer(String Question, String Answer)
+        {
+            if (File.Exists(AnswerPath))
+            {
+                using (StreamWriter sr = new StreamWriter(File.Open(AnswerPath, FileMode.OpenOrCreate)))
+                {
+                    String KeyQ = Encryption.GetKeyEncryption();
+                    String KeyA = Encryption.GetKeyEncryption();
+
+                    sr.WriteLine($"{Encryption.EncryptRSA(Question, KeyQ)}_{KeyQ}");
+                    sr.WriteLine($"{Encryption.EncryptRSA(Answer,KeyA)}_{KeyA}");
+                }
+            }
+            else
+            {
+                MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                Dialog.Message_L.Text = "Файл Answer.conf не обнаружен";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Файл Answer.conf не найден");
+
+                return;
+            }
+        }
+
+        public static String [] GetAnswer(String Question, String Answer)
+        {
+            if (File.Exists(AnswerPath))
+            {
+                using (StreamReader sw = new StreamReader(File.Open(AnswerPath, FileMode.Open)))
+                {
+                    String[] SplitRSA = sw.ReadLine().Split('_');
+                    String DecryptQuestionRSA = $"{Encryption.DecryptRSA(SplitRSA[0], SplitRSA[1])}";
+
+                    SplitRSA = sw.ReadLine().Split('_');
+                    String DecryptAnswerRSA = $"{Encryption.DecryptRSA(SplitRSA[0], SplitRSA[1])}";
+
+                    return new String[2] {DecryptQuestionRSA, DecryptAnswerRSA };
+                }
+            }
+            else
+            {
+                MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                Dialog.Message_L.Text = "Файл Answer.conf не обнаружен";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Файл Answer.conf не найден");
+
+                return null;
+            }
+        }
+
+        public static void SetPasswordApp(String Password)
+        {
+            if (File.Exists(PassAppPath))
+            {
+                using (StreamWriter sr = new StreamWriter(File.Open(PassAppPath, FileMode.OpenOrCreate)))
+                {
+                    sr.WriteLine($"{Hash.GetSHA256(Password)}");
+                }
+            }
+            else
+            {
+                MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                Dialog.Message_L.Text = "Файл Password.conf не обнаружен";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Файл Password.conf не найден");
+
+                return;
+            }
+        }
+
+        public static String GetPasswordApp()
+        {
+            if (File.Exists(PassAppPath))
+            {
+                using (StreamReader sr = new StreamReader(File.Open(PassAppPath, FileMode.Open)))
+                {
+                    return sr.ReadLine();
+                }
+            }
+            else
+            {
+                MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                Dialog.Message_L.Text = "Файл Password.conf не обнаружен";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Файл Password.conf не найден");
+
+                return null;
             }
         }
     }

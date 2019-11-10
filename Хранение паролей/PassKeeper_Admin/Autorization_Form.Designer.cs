@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Pass_TB = new System.Windows.Forms.TextBox();
             this.Enter_B = new System.Windows.Forms.Button();
-            this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.SuspendLayout();
             // 
             // Restore_B
@@ -112,14 +111,6 @@
             this.Enter_B.UseVisualStyleBackColor = false;
             this.Enter_B.Click += new System.EventHandler(this.Enter_B_Click);
             // 
-            // materialContextMenuStrip1
-            // 
-            this.materialContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialContextMenuStrip1.Depth = 0;
-            this.materialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialContextMenuStrip1.Name = "materialContextMenuStrip1";
-            this.materialContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // Autorization_Form
             // 
             this.AcceptButton = this.Enter_B;
@@ -155,7 +146,6 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox Pass_TB;
         public System.Windows.Forms.Button Enter_B;
-        private MaterialSkin.Controls.MaterialContextMenuStrip materialContextMenuStrip1;
     }
 }
 

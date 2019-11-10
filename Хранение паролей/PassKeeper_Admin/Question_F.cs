@@ -19,7 +19,12 @@ namespace PassKeeper_Admin
 
         private void Question_F_Load(object sender, EventArgs e)
         {
-            Questions_CB.Items.AddRange(new String[] { "Какая кличка у вашего домашнего питомца?", "Ваш любимый цвет", "Ваш любимый фильм" });
+            Questions_CB.Items.AddRange(new String[] { "Какая кличка у вашего домашнего питомца?", "Какой ваш любимый цвет?", "Какой ваш любимый фильм?"});
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

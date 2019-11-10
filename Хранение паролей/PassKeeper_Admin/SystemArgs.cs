@@ -16,9 +16,11 @@ namespace PassKeeper_Admin
 
     public static class SystemArgs
     {
-        public static List<User> Users = new List<User>(); //Список всех позиций
+        public static List<User> Users = new List<User>(); // Список всех позиций
 
-        public static List<User> Result = new List<User>(); //Список позиций результата
+        public static List<User> Result = new List<User>(); // Список позиций результата
+
+        public static bool FirstEntrance = false; //Маркер первого входа в программу
 
         public static void PrintLog(String Message)
         {

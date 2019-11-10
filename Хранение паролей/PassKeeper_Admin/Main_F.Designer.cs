@@ -60,6 +60,7 @@
             this.Search_TB.Name = "Search_TB";
             this.Search_TB.Size = new System.Drawing.Size(204, 20);
             this.Search_TB.TabIndex = 20;
+            this.Search_TB.TextChanged += new System.EventHandler(this.Search_TB_TextChanged);
             // 
             // Enter_B
             // 
@@ -119,6 +120,7 @@
             this.Users_LB.Location = new System.Drawing.Point(303, 50);
             this.Users_LB.Name = "Users_LB";
             this.Users_LB.Size = new System.Drawing.Size(417, 433);
+            this.Users_LB.Sorted = true;
             this.Users_LB.TabIndex = 27;
             // 
             // ResetSearch_B

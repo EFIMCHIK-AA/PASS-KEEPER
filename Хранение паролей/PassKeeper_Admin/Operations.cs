@@ -166,18 +166,20 @@ namespace PassKeeper_Admin
                     {
                         Directory.CreateDirectory($@"{SystemPath.DataUSers}\{NewUser.Name}");
                     }
-
-                    MessageOneButton_F Dialog2 = new MessageOneButton_F();
-
-                    Dialog2.Message_L.Text = "Пользователь успешно зарегистрирован";
-
-                    if (Dialog2.ShowDialog() == DialogResult.OK)
-                    {
-
-                    }
-
-                    SystemArgs.PrintLog($"Пользователь успешно зарегистрирован");
                 }
+
+                MessageOneButton_F Dialog2 = new MessageOneButton_F();
+
+                Dialog2.Message_L.Text = "Пользователь успешно зарегистрирован";
+
+                if (Dialog2.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.Users.Remove(OldUser);
+                SystemArgs.Users.Add(NewUser);
+                SystemArgs.PrintLog($"Пользователь успешно зарегистрирован");
             }
             else
             {
@@ -243,6 +245,8 @@ namespace PassKeeper_Admin
                 {
 
                 }
+
+                SystemArgs.Users.Add(User);
 
                 SystemArgs.PrintLog($"Пользователь успешно зарегистрирован");
             }

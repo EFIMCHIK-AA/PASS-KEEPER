@@ -68,7 +68,7 @@ namespace PassKeeper_Admin
 
         public override String ToString()
         {
-            return $"{_Name}({_Password})";
+            return $"{_Name} ID: {_Password}";
         }
 
         public String GetSearchString()

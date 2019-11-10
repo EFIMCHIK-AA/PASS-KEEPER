@@ -17,8 +17,47 @@ namespace PassKeeper_Admin
             InitializeComponent();
         }
 
+        private void FirstEntrance()
+        {
+            if (SystemArgs.FirstEntrance)
+            {
+                Question_F DialogQ = new Question_F();
+
+                if (DialogQ.ShowDialog() == DialogResult.OK)
+                {
+                    SystemPath.SetAnswer(DialogQ.Questions_CB.SelectedItem.ToString(), DialogQ.Answer_TB.Text.Trim());
+
+                    SystemPath.SetDataRegPath(DialogQ.RegUser_TB.Text.Trim());
+                    SystemPath.SetDataUsersPath(DialogQ.DateUser_TB.Text.Trim());
+
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+                CreatePass_F DialogP = new CreatePass_F();
+
+                if (DialogP.ShowDialog() == DialogResult.OK)
+                {
+                    SystemPath.SetPasswordApp(DialogP.Password_TB.Text.Trim());
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+                SystemPath.SetEntrance(false);
+
+                SystemArgs.FirstEntrance = false;
+            }
+        }
+
         private void Main_F_Load(object sender, EventArgs e)
         {
+            SystemPath.GetEntrance();
+            FirstEntrance();
+
             SystemPath.GetDataLogPath();
             SystemPath.GetDataRegPath();
             SystemPath.GetDataUsersPath();
@@ -60,17 +99,11 @@ namespace PassKeeper_Admin
 
             if (Search == String.Empty)
             {
-                MessageOneButton_F Dialog = new MessageOneButton_F();
-
-                Dialog.Message_L.Text = "Поле должно содержать значение";
-                Search_TB.Focus();
-
-                if (Dialog.ShowDialog() == DialogResult.OK)
-                {
-                    SystemArgs.PrintLog($"Получено пустое значение поиска");
-                    return;
-                }
+                ResetSearch();
+                return;
             }
+
+            SystemArgs.Result.Clear();
 
             foreach(User Temp in SystemArgs.Users)
             {
@@ -100,26 +133,28 @@ namespace PassKeeper_Admin
             }
         }
 
-        private void ResetSearch_B_Click(object sender, EventArgs e)
+        private void ResetSearch()
         {
             Show(SystemArgs.Users);
             SystemArgs.Result.Clear();
         }
 
+        private void ResetSearch_B_Click(object sender, EventArgs e)
+        {
+            ResetSearch();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            if(Users_LB.SelectedIndex >= 0)
-            { 
-                User_F Dialog = new User_F();
+            User_F Dialog = new User_F();
 
-                if(Dialog.ShowDialog() == DialogResult.OK)
-                {
-                    User Temp = new User(Dialog.Name_TB.Text.Trim(), Dialog.Pass_TB.Text.Trim());
+            if (Dialog.ShowDialog() == DialogResult.OK)
+            {
+                User Temp = new User(Dialog.Name_TB.Text.Trim(), Hash.GetSHA256(Dialog.Pass_TB.Text.Trim()));
 
-                    Operations.AddUser(Temp);
+                Operations.AddUser(Temp);
 
-                    Show(SystemArgs.Users);
-                }
+                Show(SystemArgs.Users);
             }
         }
 
@@ -152,9 +187,9 @@ namespace PassKeeper_Admin
 
             DialogAccept.Message_L.Text = "Вы действителньо хотите удалить позицию?";
 
-            if (DialogAccept.ShowDialog() == DialogResult.OK)
+            if (Users_LB.SelectedIndex >= 0)
             {
-                if (Users_LB.SelectedIndex >= 0)
+                if (DialogAccept.ShowDialog() == DialogResult.OK)
                 {
                     User Temp = Users_LB.SelectedItem as User;
 
@@ -162,8 +197,14 @@ namespace PassKeeper_Admin
                     SystemArgs.Users.Remove(Temp);
 
                     Show(SystemArgs.Users);
+
                 }
-            }      
+            }
+        }
+
+        private void Search_TB_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
