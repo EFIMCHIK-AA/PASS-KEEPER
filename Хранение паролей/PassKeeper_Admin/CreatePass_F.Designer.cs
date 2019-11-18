@@ -97,6 +97,8 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "CreatePass_F";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreatePass_F_FormClosing);
+            this.Load += new System.EventHandler(this.CreatePass_F_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

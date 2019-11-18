@@ -117,7 +117,7 @@
             // Users_LB
             // 
             this.Users_LB.FormattingEnabled = true;
-            this.Users_LB.Location = new System.Drawing.Point(303, 50);
+            this.Users_LB.Location = new System.Drawing.Point(289, 50);
             this.Users_LB.Name = "Users_LB";
             this.Users_LB.Size = new System.Drawing.Size(417, 433);
             this.Users_LB.Sorted = true;

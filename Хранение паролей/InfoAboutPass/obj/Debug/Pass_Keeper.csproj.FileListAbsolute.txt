@@ -1,0 +1,34 @@
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\Pass_Keeper.csprojAssemblyReference.cache
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.AboutProg.resources
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.AboutUser.resources
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.Autorization_Form.resources
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.MainLoad.resources
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.Main_Form.resources
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.MessageOneButton.resources
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.MessegeTwoButtons.resources
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.PositionForm.resources
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.Properties.Resources.resources
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.Reg_Form.resources
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\Pass_Keeper.csproj.GenerateResource.cache
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\PASS KEEPER.exe
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\PASS KEEPER.pdb
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\PASS KEEPER.exe.config
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\PASS KEEPER.exe
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\PASS KEEPER.pdb
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\AdamsLair.WinForms.dll
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\FastTree.dll
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\PopupControl.dll
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Core.WinForms.dll
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.DataSource.WinForms.dll
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.GridCommon.WinForms.dll
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Shared.Base.dll
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\AdamsLair.WinForms.pdb
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\AdamsLair.WinForms.xml
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\FastTree.xml
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\PopupControl.pdb
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Core.WinForms.xml
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.DataSource.WinForms.xml
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.GridCommon.WinForms.xml
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Shared.Base.xml
+C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\Pass_Keeper.csproj.CopyComplete

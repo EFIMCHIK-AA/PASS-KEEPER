@@ -88,7 +88,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(47, 219);
+            this.label1.Location = new System.Drawing.Point(41, 240);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 26;
@@ -99,7 +99,7 @@
             this.RegUser_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.RegUser_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RegUser_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.RegUser_TB.Location = new System.Drawing.Point(88, 217);
+            this.RegUser_TB.Location = new System.Drawing.Point(82, 238);
             this.RegUser_TB.Name = "RegUser_TB";
             this.RegUser_TB.Size = new System.Drawing.Size(341, 20);
             this.RegUser_TB.TabIndex = 25;
@@ -109,7 +109,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(47, 259);
+            this.label2.Location = new System.Drawing.Point(41, 280);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 28;
@@ -120,7 +120,7 @@
             this.DateUser_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.DateUser_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DateUser_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.DateUser_TB.Location = new System.Drawing.Point(90, 257);
+            this.DateUser_TB.Location = new System.Drawing.Point(84, 278);
             this.DateUser_TB.Name = "DateUser_TB";
             this.DateUser_TB.Size = new System.Drawing.Size(341, 20);
             this.DateUser_TB.TabIndex = 27;
@@ -131,7 +131,7 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(437, 213);
+            this.button1.Location = new System.Drawing.Point(431, 234);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 25);
             this.button1.TabIndex = 29;
@@ -145,7 +145,7 @@
             this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.button2.Location = new System.Drawing.Point(437, 253);
+            this.button2.Location = new System.Drawing.Point(431, 274);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(138, 25);
             this.button2.TabIndex = 30;
@@ -174,6 +174,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Question_F";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Question_F_FormClosing);
             this.Load += new System.EventHandler(this.Question_F_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

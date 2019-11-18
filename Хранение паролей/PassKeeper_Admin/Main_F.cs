@@ -55,6 +55,7 @@ namespace PassKeeper_Admin
 
         private void Main_F_Load(object sender, EventArgs e)
         {
+             
             SystemPath.GetEntrance();
             FirstEntrance();
 

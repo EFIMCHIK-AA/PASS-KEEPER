@@ -16,5 +16,29 @@ namespace PassKeeper_Admin
         {
             InitializeComponent();
         }
+
+        private void CreatePass_F_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(DialogResult == DialogResult.OK)
+            {
+                if(String.IsNullOrEmpty(Password_TB.Text))
+                {
+                    MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                    Dialog.Message_L.Text = "Необходимо указать значение пароля";
+
+                    if (Dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        SystemArgs.PrintLog($"Получено пустое значние пароля");
+                        e.Cancel = true;
+                    }
+                }
+            }
+        }
+
+        private void CreatePass_F_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
