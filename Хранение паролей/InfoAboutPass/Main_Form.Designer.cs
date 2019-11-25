@@ -58,8 +58,9 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Back_B = new System.Windows.Forms.Button();
-            this.Forward_B = new System.Windows.Forms.Button();
+            this.ResetSearch_B = new System.Windows.Forms.Button();
+            this.Search_B = new System.Windows.Forms.Button();
+            this.Search_TB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Positions_DGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Headers_DGV)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +68,7 @@
             // Positions_DGV
             // 
             this.Positions_DGV.AllowUserToAddRows = false;
+            this.Positions_DGV.AllowUserToDeleteRows = false;
             this.Positions_DGV.AllowUserToResizeColumns = false;
             this.Positions_DGV.AllowUserToResizeRows = false;
             this.Positions_DGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(58)))), ((int)(((byte)(96)))));
@@ -101,7 +103,7 @@
             this.Positions_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Positions_DGV.RowHeadersVisible = false;
             this.Positions_DGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.Positions_DGV.Size = new System.Drawing.Size(703, 487);
+            this.Positions_DGV.Size = new System.Drawing.Size(703, 518);
             this.Positions_DGV.StandardTab = true;
             this.Positions_DGV.TabIndex = 9;
             this.Positions_DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Positions_DGV_CellClick);
@@ -111,6 +113,7 @@
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "DateCreate";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column1.HeaderText = "Дата добавления";
@@ -121,6 +124,7 @@
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "Name";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column2.HeaderText = "Логин";
@@ -130,6 +134,7 @@
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "Password";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column3.HeaderText = "Пароль";
@@ -139,6 +144,7 @@
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "Description";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column4.HeaderText = "Наименование | Примечание";
@@ -150,6 +156,7 @@
             // 
             this.Add_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.Add_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Add_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.Add_B.Location = new System.Drawing.Point(13, 81);
             this.Add_B.Name = "Add_B";
@@ -164,6 +171,7 @@
             this.Delete_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.Delete_B.Enabled = false;
             this.Delete_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Delete_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.Delete_B.Location = new System.Drawing.Point(13, 143);
             this.Delete_B.Name = "Delete_B";
@@ -177,6 +185,7 @@
             // 
             this.Change_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.Change_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Change_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Change_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.Change_B.Location = new System.Drawing.Point(13, 112);
             this.Change_B.Name = "Change_B";
@@ -190,6 +199,7 @@
             // 
             this.User_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.User_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.User_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.User_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.User_B.Location = new System.Drawing.Point(13, 460);
             this.User_B.Name = "User_B";
@@ -203,6 +213,7 @@
             // 
             this.Program_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.Program_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Program_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Program_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.Program_B.Location = new System.Drawing.Point(13, 429);
             this.Program_B.Name = "Program_B";
@@ -216,6 +227,7 @@
             // 
             this.Exit_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.Exit_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Exit_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.Exit_B.Location = new System.Drawing.Point(13, 565);
             this.Exit_B.Name = "Exit_B";
@@ -229,6 +241,7 @@
             // 
             this.ChangeUser_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.ChangeUser_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChangeUser_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.ChangeUser_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.ChangeUser_B.Location = new System.Drawing.Point(13, 534);
             this.ChangeUser_B.Name = "ChangeUser_B";
@@ -321,40 +334,54 @@
             this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn4.Width = 250;
             // 
-            // Back_B
+            // ResetSearch_B
             // 
-            this.Back_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.Back_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Back_B.Location = new System.Drawing.Point(245, 565);
-            this.Back_B.Name = "Back_B";
-            this.Back_B.Size = new System.Drawing.Size(350, 25);
-            this.Back_B.TabIndex = 8;
-            this.Back_B.Text = "Предыдущие позиции";
-            this.Back_B.UseVisualStyleBackColor = false;
-            this.Back_B.Click += new System.EventHandler(this.Back_B_Click);
+            this.ResetSearch_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.ResetSearch_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetSearch_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.ResetSearch_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.ResetSearch_B.Location = new System.Drawing.Point(12, 323);
+            this.ResetSearch_B.Name = "ResetSearch_B";
+            this.ResetSearch_B.Size = new System.Drawing.Size(210, 25);
+            this.ResetSearch_B.TabIndex = 31;
+            this.ResetSearch_B.Text = "Очистить фильтр";
+            this.ResetSearch_B.UseVisualStyleBackColor = false;
+            this.ResetSearch_B.Click += new System.EventHandler(this.ResetSearch_B_Click);
             // 
-            // Forward_B
+            // Search_B
             // 
-            this.Forward_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.Forward_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Forward_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Forward_B.Location = new System.Drawing.Point(598, 565);
-            this.Forward_B.Name = "Forward_B";
-            this.Forward_B.Size = new System.Drawing.Size(350, 25);
-            this.Forward_B.TabIndex = 9;
-            this.Forward_B.Text = "Следущие позиции";
-            this.Forward_B.UseVisualStyleBackColor = false;
-            this.Forward_B.Click += new System.EventHandler(this.Forward_B_Click);
+            this.Search_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.Search_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.Search_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.Search_B.Location = new System.Drawing.Point(12, 292);
+            this.Search_B.Name = "Search_B";
+            this.Search_B.Size = new System.Drawing.Size(210, 25);
+            this.Search_B.TabIndex = 30;
+            this.Search_B.Text = "Поиск";
+            this.Search_B.UseVisualStyleBackColor = false;
+            this.Search_B.Click += new System.EventHandler(this.Search_B_Click);
+            // 
+            // Search_TB
+            // 
+            this.Search_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
+            this.Search_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Search_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Search_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.Search_TB.Location = new System.Drawing.Point(12, 266);
+            this.Search_TB.Name = "Search_TB";
+            this.Search_TB.Size = new System.Drawing.Size(210, 23);
+            this.Search_TB.TabIndex = 29;
             // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::InfoAboutPass.Properties.Resources.MainForm;
+            this.BackgroundImage = global::InfoAboutPass.Properties.Resources.MainForm1;
             this.ClientSize = new System.Drawing.Size(960, 635);
-            this.Controls.Add(this.Forward_B);
-            this.Controls.Add(this.Back_B);
+            this.Controls.Add(this.ResetSearch_B);
+            this.Controls.Add(this.Search_B);
+            this.Controls.Add(this.Search_TB);
             this.Controls.Add(this.Headers_DGV);
             this.Controls.Add(this.Exit_B);
             this.Controls.Add(this.ChangeUser_B);
@@ -376,6 +403,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Positions_DGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Headers_DGV)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -390,8 +418,6 @@
         private System.Windows.Forms.Button Exit_B;
         private System.Windows.Forms.Button ChangeUser_B;
         private System.Windows.Forms.DataGridView Headers_DGV;
-        private System.Windows.Forms.Button Back_B;
-        private System.Windows.Forms.Button Forward_B;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -400,5 +426,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        public System.Windows.Forms.Button ResetSearch_B;
+        public System.Windows.Forms.Button Search_B;
+        public System.Windows.Forms.TextBox Search_TB;
     }
 }

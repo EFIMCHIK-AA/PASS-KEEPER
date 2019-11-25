@@ -112,7 +112,7 @@ namespace PassKeeper_Admin
             {
                 using (StreamWriter sw = new StreamWriter(File.Open(DataUSersPath, FileMode.OpenOrCreate)))
                 {
-                    sw.WriteLine();
+                    sw.WriteLine(Path);
                 }
             }
             else
@@ -158,6 +158,87 @@ namespace PassKeeper_Admin
             }
         }
 
+        private static void FirstEntrance()
+        {
+            if (SystemArgs.FirstEntrance)
+            {
+                WelcomeFirst_F DialogW = new WelcomeFirst_F();
+
+                if(DialogW.ShowDialog() == DialogResult.OK)
+                {
+                    SystemArgs.PrintLog($"Инциализация процедуры настройки программы");
+                }
+                else
+                {
+                    Application.Exit();
+                    return;
+                }
+
+
+                Question_F DialogQ = new Question_F();
+
+                if (DialogQ.ShowDialog() == DialogResult.OK)
+                {
+                    SystemArgs.PrintLog($"Пути указаны");
+                }
+                else
+                {
+                    MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                    Dialog.Message_L.Text = "Необходмо установить данные восстановления";
+
+                    if (Dialog.ShowDialog() == DialogResult.OK)
+                    {
+
+                    }
+
+                    SystemArgs.PrintLog($"Необходмо установить данные восстановления");
+
+                    Application.Exit();
+                }
+
+                CreatePass_F DialogP = new CreatePass_F();
+
+                if (DialogP.ShowDialog() == DialogResult.OK)
+                {
+                    SystemPath.SetAnswer(DialogQ.Question_TB.Text.Trim(), DialogQ.Answer_TB.Text.Trim());
+
+                    SystemPath.SetDataRegPath(DialogQ.RegUser_TB.Text.Trim());
+                    SystemPath.SetDataUsersPath(DialogQ.DataUser_TB.Text.Trim());
+                    SystemPath.SetPasswordApp(DialogP.Password_TB.Text.Trim());
+                }
+                else
+                {
+                    MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                    Dialog.Message_L.Text = "Необходмо установить данные восстановления";
+
+                    if (Dialog.ShowDialog() == DialogResult.OK)
+                    {
+
+                    }
+
+                    SystemArgs.PrintLog($"Необходмо установить данные восстановления");
+                    Application.Exit();
+                }
+
+                SystemPath.SetEntrance(false);
+
+                SystemArgs.FirstEntrance = false;
+
+                SystemArgs.PrintLog($"Процедуры настройки программы завершена");
+            }
+            else
+            {
+                Autorization_Form Dialog = new Autorization_Form();
+
+                if(Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    
+                }
+            }
+        }
+
         public static void GetEntrance()
         {
             if (File.Exists(FirstEntancePath))
@@ -175,6 +256,8 @@ namespace PassKeeper_Admin
                         SystemArgs.FirstEntrance = false;
                     }
                 }
+
+                FirstEntrance();
             }
             else
             {

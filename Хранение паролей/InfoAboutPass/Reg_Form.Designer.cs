@@ -43,11 +43,11 @@
             this.SeePass_CB.AutoSize = true;
             this.SeePass_CB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
             this.SeePass_CB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SeePass_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.SeePass_CB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.SeePass_CB.Location = new System.Drawing.Point(101, 556);
-            this.SeePass_CB.Margin = new System.Windows.Forms.Padding(4);
+            this.SeePass_CB.Location = new System.Drawing.Point(76, 452);
             this.SeePass_CB.Name = "SeePass_CB";
-            this.SeePass_CB.Size = new System.Drawing.Size(139, 21);
+            this.SeePass_CB.Size = new System.Drawing.Size(145, 22);
             this.SeePass_CB.TabIndex = 3;
             this.SeePass_CB.Text = "Показать пароль";
             this.SeePass_CB.UseVisualStyleBackColor = false;
@@ -57,11 +57,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(24, 528);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(18, 429);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
+            this.label3.Size = new System.Drawing.Size(61, 18);
             this.label3.TabIndex = 17;
             this.label3.Text = "Пароль";
             // 
@@ -69,33 +69,33 @@
             // 
             this.Login_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.Login_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Login_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Login_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Login_TB.Location = new System.Drawing.Point(101, 492);
-            this.Login_TB.Margin = new System.Windows.Forms.Padding(4);
+            this.Login_TB.Location = new System.Drawing.Point(85, 400);
             this.Login_TB.Name = "Login_TB";
-            this.Login_TB.Size = new System.Drawing.Size(350, 22);
+            this.Login_TB.Size = new System.Drawing.Size(254, 22);
             this.Login_TB.TabIndex = 1;
             // 
             // Pass_TB
             // 
             this.Pass_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.Pass_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Pass_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Pass_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Pass_TB.Location = new System.Drawing.Point(101, 524);
-            this.Pass_TB.Margin = new System.Windows.Forms.Padding(4);
+            this.Pass_TB.Location = new System.Drawing.Point(85, 426);
             this.Pass_TB.Name = "Pass_TB";
-            this.Pass_TB.Size = new System.Drawing.Size(350, 22);
+            this.Pass_TB.Size = new System.Drawing.Size(254, 22);
             this.Pass_TB.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(24, 495);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(18, 402);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(50, 18);
             this.label1.TabIndex = 15;
             this.label1.Text = "Логин";
             // 
@@ -104,11 +104,11 @@
             this.Cancel_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.Cancel_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Cancel_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Cancel_B.Location = new System.Drawing.Point(28, 638);
-            this.Cancel_B.Margin = new System.Windows.Forms.Padding(4);
+            this.Cancel_B.Location = new System.Drawing.Point(21, 518);
             this.Cancel_B.Name = "Cancel_B";
-            this.Cancel_B.Size = new System.Drawing.Size(424, 31);
+            this.Cancel_B.Size = new System.Drawing.Size(318, 25);
             this.Cancel_B.TabIndex = 5;
             this.Cancel_B.Text = "Отмена";
             this.Cancel_B.UseVisualStyleBackColor = false;
@@ -118,11 +118,11 @@
             this.OK_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.OK_B.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.OK_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OK_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.OK_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.OK_B.Location = new System.Drawing.Point(28, 599);
-            this.OK_B.Margin = new System.Windows.Forms.Padding(4);
+            this.OK_B.Location = new System.Drawing.Point(21, 487);
             this.OK_B.Name = "OK_B";
-            this.OK_B.Size = new System.Drawing.Size(424, 31);
+            this.OK_B.Size = new System.Drawing.Size(318, 25);
             this.OK_B.TabIndex = 4;
             this.OK_B.Text = "Подтвердить";
             this.OK_B.UseVisualStyleBackColor = false;
@@ -131,11 +131,11 @@
             // Reg_Form
             // 
             this.AcceptButton = this.OK_B;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InfoAboutPass.Properties.Resources.Регистрация;
             this.CancelButton = this.CancelButton;
-            this.ClientSize = new System.Drawing.Size(481, 741);
+            this.ClientSize = new System.Drawing.Size(361, 602);
             this.Controls.Add(this.Cancel_B);
             this.Controls.Add(this.OK_B);
             this.Controls.Add(this.SeePass_CB);
@@ -145,7 +145,6 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Reg_Form";

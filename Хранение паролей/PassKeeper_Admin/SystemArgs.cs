@@ -1,4 +1,5 @@
 ﻿using System;
+using Equin.ApplicationFramework;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace PassKeeper_Admin
         public static List<User> Users = new List<User>(); // Список всех позиций
 
         public static List<User> Result = new List<User>(); // Список позиций результата
+
+        public static BindingListView<User> View;
 
         public static bool FirstEntrance = false; //Маркер первого входа в программу
 

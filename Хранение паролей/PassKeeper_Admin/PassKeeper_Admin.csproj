@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DataGridViewSortableBinding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b24ffdddc84bbf59, processorArchitecture=MSIL">
+      <HintPath>..\packages\SortableBindingList.1.0.0\lib\net40\DataGridViewSortableBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Equin.ApplicationFramework.BindingListView, Version=1.4.5222.35545, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Equin.ApplicationFramework.BindingListView.1.4.5222.35545\lib\net40-Client\Equin.ApplicationFramework.BindingListView.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
@@ -89,6 +95,13 @@
       <DependentUpon>MessegeTwoButtons_F.cs</DependentUpon>
     </Compile>
     <Compile Include="Operations.cs" />
+    <Compile Include="Restore_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restore_F.Designer.cs">
+      <DependentUpon>Restore_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sort.cs" />
     <Compile Include="User_F.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +119,12 @@
     <Compile Include="SystemArgs.cs" />
     <Compile Include="SystemPath.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="WelcomeFirst_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeFirst_F.Designer.cs">
+      <DependentUpon>WelcomeFirst_F.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Autorization_Form.resx">
       <DependentUpon>Autorization_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +140,9 @@
     <EmbeddedResource Include="MessegeTwoButtons_F.resx">
       <DependentUpon>MessegeTwoButtons_F.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Restore_F.resx">
+      <DependentUpon>Restore_F.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_F.resx">
       <DependentUpon>User_F.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,10 +154,15 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Question_F.resx">
       <DependentUpon>Question_F.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeFirst_F.resx">
+      <DependentUpon>WelcomeFirst_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,6 +175,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Авторизация4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreatePass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreatePass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreatePass2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MessageCustom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreatePath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreatePath1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreatePath2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreatePass3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restrore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restrore1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataUserCh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WelcomeFinal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

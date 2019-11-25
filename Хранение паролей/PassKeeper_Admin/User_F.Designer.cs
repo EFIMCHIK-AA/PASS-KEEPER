@@ -44,10 +44,11 @@
             this.SeePass_CB.AutoSize = true;
             this.SeePass_CB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
             this.SeePass_CB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SeePass_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.SeePass_CB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.SeePass_CB.Location = new System.Drawing.Point(111, 285);
+            this.SeePass_CB.Location = new System.Drawing.Point(81, 275);
             this.SeePass_CB.Name = "SeePass_CB";
-            this.SeePass_CB.Size = new System.Drawing.Size(111, 17);
+            this.SeePass_CB.Size = new System.Drawing.Size(145, 22);
             this.SeePass_CB.TabIndex = 4;
             this.SeePass_CB.Text = "Показать пароль";
             this.SeePass_CB.UseVisualStyleBackColor = false;
@@ -58,76 +59,89 @@
             this.OK_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.OK_B.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.OK_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OK_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.OK_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.OK_B.Location = new System.Drawing.Point(12, 308);
+            this.OK_B.Location = new System.Drawing.Point(14, 303);
             this.OK_B.Name = "OK_B";
             this.OK_B.Size = new System.Drawing.Size(334, 25);
             this.OK_B.TabIndex = 6;
             this.OK_B.Text = "Подтвердить";
             this.OK_B.UseVisualStyleBackColor = false;
+            this.OK_B.Click += new System.EventHandler(this.OK_B_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(14, 262);
+            this.label2.Location = new System.Drawing.Point(14, 250);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(61, 18);
             this.label2.TabIndex = 19;
             this.label2.Text = "Пароль";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Pass_TB
             // 
             this.Pass_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.Pass_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Pass_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Pass_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Pass_TB.Location = new System.Drawing.Point(111, 259);
+            this.Pass_TB.Location = new System.Drawing.Point(81, 250);
             this.Pass_TB.MaxLength = 20;
             this.Pass_TB.Name = "Pass_TB";
-            this.Pass_TB.Size = new System.Drawing.Size(237, 20);
+            this.Pass_TB.Size = new System.Drawing.Size(267, 23);
             this.Pass_TB.TabIndex = 3;
+            this.Pass_TB.TextChanged += new System.EventHandler(this.Pass_TB_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(35)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(14, 236);
+            this.label3.Location = new System.Drawing.Point(14, 224);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(50, 18);
             this.label3.TabIndex = 16;
             this.label3.Text = "Логин";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Name_TB
             // 
             this.Name_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(70)))));
             this.Name_TB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Name_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Name_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Name_TB.Location = new System.Drawing.Point(111, 233);
+            this.Name_TB.Location = new System.Drawing.Point(81, 224);
             this.Name_TB.MaxLength = 20;
             this.Name_TB.Name = "Name_TB";
-            this.Name_TB.Size = new System.Drawing.Size(237, 20);
+            this.Name_TB.Size = new System.Drawing.Size(267, 23);
             this.Name_TB.TabIndex = 2;
+            this.Name_TB.TextChanged += new System.EventHandler(this.Name_TB_TextChanged);
             // 
             // Cancel_B
             // 
             this.Cancel_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.Cancel_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Cancel_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.Cancel_B.Location = new System.Drawing.Point(12, 339);
+            this.Cancel_B.Location = new System.Drawing.Point(14, 334);
             this.Cancel_B.Name = "Cancel_B";
             this.Cancel_B.Size = new System.Drawing.Size(334, 25);
             this.Cancel_B.TabIndex = 7;
             this.Cancel_B.Text = "Отмена";
             this.Cancel_B.UseVisualStyleBackColor = false;
+            this.Cancel_B.Click += new System.EventHandler(this.Cancel_B_Click);
             // 
-            // PositionForm
+            // User_F
             // 
             this.AcceptButton = this.OK_B;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PassKeeper_Admin.Properties.Resources.DataUser;
             this.ClientSize = new System.Drawing.Size(360, 375);
             this.Controls.Add(this.SeePass_CB);
             this.Controls.Add(this.OK_B);
@@ -140,7 +154,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "PositionForm";
+            this.Name = "User_F";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добаление позиции";

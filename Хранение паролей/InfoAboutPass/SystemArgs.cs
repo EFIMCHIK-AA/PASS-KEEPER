@@ -1,4 +1,5 @@
 ﻿using System;
+using Equin.ApplicationFramework;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,13 @@ namespace InfoAboutPass
     {
         public static User CurrentUser; //Текущий пользователь
 
+        public static BindingListView<Position> View; //Визуализация
+
         public static Autorization_Form MainForm; //Ссылка на главную форму
 
         public static List<Position> Positions; //Список всех позиций
+
+        public static List<Position> Result = new List<Position>(); // Список поиска
 
         public static Int32 IndexRow_Change; //Номер строки при выделении
 

@@ -120,22 +120,7 @@ namespace PassKeeper_Admin
                     if($@"{SystemPath.DataReg}\{OldUser.Name}" == PathFiles[i])
                     {
                         Index = i;
-                    }
-
-                    if($@"{SystemPath.DataReg}\{NewUser.Name}" == PathFiles[i])
-                    {
-                        MessageOneButton_F Dialog = new MessageOneButton_F();
-
-                        Dialog.Message_L.Text = "Пользователь с таким именем уже существует";
-
-                        if (Dialog.ShowDialog() == DialogResult.OK)
-                        {
-
-                        }
-
-                        SystemArgs.PrintLog($"Пользователь существует");
-
-                        return;
+                        break;
                     }
                 }
 
@@ -156,16 +141,26 @@ namespace PassKeeper_Admin
 
                 PathFiles = Directory.GetDirectories($@"{SystemPath.DataUSers}");
 
+                bool Flag = false;
+
                 for (Int32 i = 0; i < PathFiles.Length; i++)
                 {
-                    if (Directory.Exists($@"{SystemPath.DataUSers}\{OldUser.Password}"))
+                    if (Directory.Exists($@"{SystemPath.DataUSers}\{OldUser.Name}"))
+                    {
+                        Flag = true;
+                    }
+                }
+
+                if (Flag)
+                {
+                    if(NewUser.Name != OldUser.Name)
                     {
                         Directory.Move($@"{SystemPath.DataUSers}\{OldUser.Name}", $@"{SystemPath.DataUSers}\{NewUser.Name}");
                     }
-                    else
-                    {
-                        Directory.CreateDirectory($@"{SystemPath.DataUSers}\{NewUser.Name}");
-                    }
+                }
+                else
+                {
+                    Directory.CreateDirectory($@"{SystemPath.DataUSers}\{NewUser.Name}");
                 }
 
                 MessageOneButton_F Dialog2 = new MessageOneButton_F();

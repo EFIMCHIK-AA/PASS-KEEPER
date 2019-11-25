@@ -79,5 +79,35 @@ namespace PassKeeper_Admin
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             this.WndProc(ref m);
         }
+
+        private void OK_B_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pass_TB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Name_TB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cancel_B_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

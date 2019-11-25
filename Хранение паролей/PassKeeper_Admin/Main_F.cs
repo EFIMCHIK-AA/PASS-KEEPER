@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Equin.ApplicationFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,47 +18,24 @@ namespace PassKeeper_Admin
             InitializeComponent();
         }
 
-        private void FirstEntrance()
+        bool CurrentTypeSort = true;
+
+        private void FirstRowDGV()
         {
-            if (SystemArgs.FirstEntrance)
-            {
-                Question_F DialogQ = new Question_F();
+            Headers_DGV.RowCount = 1;
 
-                if (DialogQ.ShowDialog() == DialogResult.OK)
-                {
-                    SystemPath.SetAnswer(DialogQ.Questions_CB.SelectedItem.ToString(), DialogQ.Answer_TB.Text.Trim());
-
-                    SystemPath.SetDataRegPath(DialogQ.RegUser_TB.Text.Trim());
-                    SystemPath.SetDataUsersPath(DialogQ.DateUser_TB.Text.Trim());
-
-                }
-                else
-                {
-                    Application.Exit();
-                }
-
-                CreatePass_F DialogP = new CreatePass_F();
-
-                if (DialogP.ShowDialog() == DialogResult.OK)
-                {
-                    SystemPath.SetPasswordApp(DialogP.Password_TB.Text.Trim());
-                }
-                else
-                {
-                    Application.Exit();
-                }
-
-                SystemPath.SetEntrance(false);
-
-                SystemArgs.FirstEntrance = false;
-            }
+            Headers_DGV[0, 0].Value = "Имя пользователя";
+            Headers_DGV[1, 0].Value = "Идентификатор";
         }
+
+        
 
         private void Main_F_Load(object sender, EventArgs e)
         {
+            FirstRowDGV();
              
             SystemPath.GetEntrance();
-            FirstEntrance();
+
 
             SystemPath.GetDataLogPath();
             SystemPath.GetDataRegPath();
@@ -66,12 +44,23 @@ namespace PassKeeper_Admin
 
             Show(SystemArgs.Users);
 
+            if(SystemArgs.View.Count <= 0)
+            {
+                Search_TB.Enabled = false;
+                Search_B.Enabled = false;
+                ResetSearch_B.Enabled = false;
+                Del_B.Enabled = false;
+                Ch_B.Enabled = false;
+            }
         }
 
         private void Show(List<User> List)
         {
-            Users_LB.DataSource = null;
-            Users_LB.DataSource = List;
+            SystemArgs.View = null;
+            //Positions_DGV.DataSource = null;
+            SystemArgs.View = new BindingListView<User>(List);
+
+            Positions_DGV.DataSource = SystemArgs.View;
         }
 
         private void Exit_B_Click(object sender, EventArgs e)
@@ -136,6 +125,7 @@ namespace PassKeeper_Admin
 
         private void ResetSearch()
         {
+            Search_TB.Text = String.Empty;
             Show(SystemArgs.Users);
             SystemArgs.Result.Clear();
         }
@@ -161,22 +151,21 @@ namespace PassKeeper_Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Users_LB.SelectedIndex >= 0)
+            User Temp = (User)SystemArgs.View[Positions_DGV.CurrentCell.RowIndex];
+
+            User_F Dialog = new User_F();
+
+            Dialog.BackgroundImage = Properties.Resources.DataUserCh;
+
+            Dialog.Name_TB.Text = Temp.Name;
+
+            if (Dialog.ShowDialog() == DialogResult.OK)
             {
-                User Temp = Users_LB.SelectedItem as User;
+                User NewUser = new User(Dialog.Name_TB.Text.Trim(), Hash.GetSHA256(Dialog.Pass_TB.Text.Trim()));
 
-                User_F Dialog = new User_F();
+                Operations.ChangeUsers(NewUser, Temp);
 
-                Dialog.Name_TB.Text = Temp.Name;
-
-                if (Dialog.ShowDialog() == DialogResult.OK)
-                {
-                    User NewUser = new User(Dialog.Name_TB.Text.Trim(),Dialog.Pass_TB.Text.Trim());
-
-                    Operations.ChangeUsers(NewUser, Temp);
-
-                    Show(SystemArgs.Users);
-                }
+                Show(SystemArgs.Users);
             }
         }
 
@@ -188,24 +177,108 @@ namespace PassKeeper_Admin
 
             DialogAccept.Message_L.Text = "Вы действителньо хотите удалить позицию?";
 
-            if (Users_LB.SelectedIndex >= 0)
+            if (DialogAccept.ShowDialog() == DialogResult.OK)
             {
-                if (DialogAccept.ShowDialog() == DialogResult.OK)
-                {
-                    User Temp = Users_LB.SelectedItem as User;
+                User Temp = (User)SystemArgs.View[Positions_DGV.CurrentCell.RowIndex];
 
-                    Operations.DeleteUser(Temp);
-                    SystemArgs.Users.Remove(Temp);
+                Operations.DeleteUser(Temp);
+                SystemArgs.Users.Remove(Temp);
 
-                    Show(SystemArgs.Users);
+                Show(SystemArgs.Users);
 
-                }
             }
         }
 
         private void Search_TB_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Positions_DGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.BackColor = Color.FromArgb(3, 43, 70);
+            e.CellStyle.ForeColor = Color.FromArgb(0, 201, 255);
+            e.CellStyle.SelectionForeColor = Color.FromArgb(0, 201, 255);
+            e.CellStyle.SelectionBackColor = Color.FromArgb(3, 30, 49);
+        }
+
+        private void Headers_DGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.BackColor = Color.FromArgb(4, 36, 59);
+            e.CellStyle.ForeColor = Color.FromArgb(110, 241, 243);
+            e.CellStyle.SelectionForeColor = Color.FromArgb(110, 241, 243);
+            e.CellStyle.SelectionBackColor = Color.FromArgb(4, 36, 59);
+        }
+
+        private void Positions_DGV_SelectionChanged(object sender, EventArgs e)
+        {
+            Positions_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //Выделение строки
+
+            if(SystemArgs.View.Count > 0)
+            {
+                Search_TB.Enabled = true;
+                Search_B.Enabled = true;
+                ResetSearch_B.Enabled = true;
+                Del_B.Enabled = true;
+                Ch_B.Enabled = true;
+            }
+            else
+            {
+                Search_TB.Enabled = false;
+                Search_B.Enabled = false;
+                ResetSearch_B.Enabled = false;
+                Del_B.Enabled = false;
+                Ch_B.Enabled = false;
+            }
+        }
+
+        private void Main_F_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
+        }
+
+        private void Headers_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CurrentTypeSort = !CurrentTypeSort;
+
+            if (e.ColumnIndex == 0)
+            {
+                if (CurrentTypeSort)
+                {
+                    Headers_DGV[e.ColumnIndex, 0].Value = "Имя пользователя ↑";
+                }
+                else
+                {
+                    Headers_DGV[e.ColumnIndex, 0].Value = "Имя пользователя ↓";
+                }
+
+                Headers_DGV[1, 0].Value = "Идентификатор";
+
+                Sort.ByName(CurrentTypeSort);
+
+                SystemArgs.PrintLog($"Сортировака по имени пользователя выполнена");
+            }
+            else if (e.ColumnIndex == 1)
+            {
+                if (CurrentTypeSort)
+                {
+                    Headers_DGV[e.ColumnIndex, 0].Value = "Идентификатор ↑";
+                }
+                else
+                {
+                    Headers_DGV[e.ColumnIndex, 0].Value = "Идентификатор ↓";
+                }
+
+                Headers_DGV[0, 0].Value = "Имя пользователя";
+
+                Sort.ByHash(CurrentTypeSort);
+
+                SystemArgs.PrintLog($"Сортировака по идентификатору выполнена");
+            }
+
+            Show(SystemArgs.Users);
         }
     }
 }

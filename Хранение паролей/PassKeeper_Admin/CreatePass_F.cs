@@ -23,22 +23,68 @@ namespace PassKeeper_Admin
             {
                 if(String.IsNullOrEmpty(Password_TB.Text))
                 {
-                    MessageOneButton_F Dialog = new MessageOneButton_F();
+                    MessageOneButton_F DialogErr = new MessageOneButton_F();
 
-                    Dialog.Message_L.Text = "Необходимо указать значение пароля";
+                    DialogErr.Message_L.Text = "Необходимо указать значение пароля";
 
-                    if (Dialog.ShowDialog() == DialogResult.OK)
+                    if (DialogErr.ShowDialog() == DialogResult.OK)
                     {
                         SystemArgs.PrintLog($"Получено пустое значние пароля");
                         e.Cancel = true;
+                        return;
                     }
+                }
+
+                if(Password_TB.Text.Trim().Length < 6)
+                {
+                    MessageOneButton_F DialogErr = new MessageOneButton_F();
+
+                    DialogErr.Message_L.Text = "Длина пароля должна быть не менее 6 символов";
+
+                    if (DialogErr.ShowDialog() == DialogResult.OK)
+                    {
+                        SystemArgs.PrintLog($"Длина пароля менеее 6 символов");
+                        e.Cancel = true;
+                        return;
+                    }
+                }
+
+                MessegeTwoButtons_F Dialog = new MessegeTwoButtons_F();
+
+                Dialog.Message_L.Text = "Вы действителньо хотите установить этот пароль?";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    SystemArgs.PrintLog($"Пароль успешно сохранен");
+                }
+                else
+                {
+                    SystemArgs.PrintLog($"Процедура выхода из программы отменена");
+                    e.Cancel = true;
                 }
             }
         }
 
         private void CreatePass_F_Load(object sender, EventArgs e)
         {
+            Password_TB.UseSystemPasswordChar = true;
+        }
 
+        private void OK_B_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cancel_B_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreatePass_F_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
         }
     }
 }

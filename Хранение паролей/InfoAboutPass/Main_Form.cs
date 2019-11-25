@@ -1,4 +1,5 @@
 ﻿using System;
+using Equin.ApplicationFramework;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,8 +22,6 @@ namespace InfoAboutPass
 
         bool CurrentTypeSort = true;
         bool Confirm;
-        Int32 LeftPos;
-        Int32 RightPos;
 
         private void ChangeData()
         {
@@ -70,12 +69,7 @@ namespace InfoAboutPass
 
                 }
 
-                ToStartPos();
-                
-                if (SystemArgs.Positions.Count > 22)
-                {
-                    Forward_B.Enabled = true;
-                }
+                ShowCurrentPositions(SystemArgs.Positions);
 
                 SystemArgs.PrintLog($"Изменение позиции успешно завершено");
             }
@@ -83,28 +77,6 @@ namespace InfoAboutPass
             {
                 SystemArgs.PrintLog($"Процедура изменении позиции отменена");
             }
-        }
-
-        private void ToStartPos()
-        {
-            Back_B.Enabled = false;
-
-            if (SystemArgs.Positions.Count <= 22)
-            {
-                Positions_DGV.RowCount = SystemArgs.Positions.Count;
-                RightPos = SystemArgs.Positions.Count;
-                Forward_B.Enabled = false;
-            }
-            else
-            {
-                Positions_DGV.RowCount = 22;
-                RightPos = 22;
-                Forward_B.Enabled = true;
-            }
-
-            LeftPos = 0;
-
-            ShowCurrentPositions();
         }
 
         private void FirstRowDGV()
@@ -117,29 +89,25 @@ namespace InfoAboutPass
             Headers_DGV[3, 0].Value = "Наименование | Описание";
         }
 
-        private void ShowCurrentPositions()
+        private void ShowCurrentPositions(List<Position> List)
         {
-            Positions_DGV.RowCount = Math.Abs(RightPos - LeftPos);
+            SystemArgs.View = null;
+            //Positions_DGV.DataSource = null;
+            SystemArgs.View = new BindingListView<Position>(List);
 
-            for (Int32 i = LeftPos, j = 0; i < RightPos; i++)
-            {
-                Positions_DGV[0, j].Value = SystemArgs.Positions[i].DateCreate.ToString();
-                Positions_DGV[1, j].Value = SystemArgs.Positions[i].Name;
-                Positions_DGV[2, j].Value = SystemArgs.Positions[i].Password;
-                Positions_DGV[3, j].Value = SystemArgs.Positions[i].Description;
-
-                j++;
-            }
+            Positions_DGV.DataSource = SystemArgs.View;
         }
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
+            Change_B.Enabled = false;
+            Delete_B.Enabled = false;
+
             SystemArgs.Positions = new List<Position>();
 
             String[] TempPositions = Operations.GetAllPositions();
 
             FirstRowDGV();
-
 
             for (Int32 i = 0; i < TempPositions.Length; i++)
             {
@@ -150,11 +118,11 @@ namespace InfoAboutPass
 
             SystemArgs.PrintLog($"Конвертация позиций => Успешно ");
 
-            ToStartPos();
+            ShowCurrentPositions(SystemArgs.Positions);
 
             SystemArgs.PrintLog($"Визуализация позиций => Успешно ");
 
-            Positions_DGV.ClearSelection(); //Убираем выделение первой ячейки при загрузке таблицы
+            //Positions_DGV.ClearSelection(); //Убираем выделение первой ячейки при загрузке таблицы
         }
 
         private void Main_Form_FormClosing(object sender, FormClosingEventArgs e)
@@ -290,15 +258,7 @@ namespace InfoAboutPass
 
                 }
 
-                ToStartPos();
-
-                Change_B.Enabled = false;
-                Delete_B.Enabled = false;
-
-                if (SystemArgs.Positions.Count > 22)
-                {
-                    Forward_B.Enabled = true;
-                }
+                ShowCurrentPositions(SystemArgs.Positions);
 
                 SystemArgs.PrintLog($"Добавление позиции завершено успешно");
             }
@@ -331,14 +291,12 @@ namespace InfoAboutPass
 
                 SystemArgs.Positions.RemoveAt(SystemArgs.IndexRow_Change);
 
-                ToStartPos();
+                ShowCurrentPositions(SystemArgs.Positions);
 
-                Change_B.Enabled = false;
-                Delete_B.Enabled = false;
-
-                if (SystemArgs.Positions.Count > 22)
+                if(SystemArgs.Positions.Count <= 0)
                 {
-                    Forward_B.Enabled = true;
+                    Change_B.Enabled = false;
+                    Delete_B.Enabled = false;
                 }
 
                 SystemArgs.PrintLog($"Удаление позициии успешно завершено");
@@ -375,62 +333,6 @@ namespace InfoAboutPass
 
         #endregion
 
-        #region Переключение списка позиций
-
-        private void Forward_B_Click(object sender, EventArgs e)
-        {
-            RightPos = RightPos + 22;
-
-            if (RightPos > SystemArgs.Positions.Count)
-            {
-                RightPos = SystemArgs.Positions.Count;
-
-                Forward_B.Enabled = false;
-            }
-
-            LeftPos = LeftPos + 22;
-
-            Back_B.Enabled = true;
-
-            ShowCurrentPositions();
-        }
-
-        private void Back_B_Click(object sender, EventArgs e)
-        {
-            if (RightPos % 22 != 0)
-            {
-                RightPos = RightPos - (RightPos % 22);
-            }
-            else
-            {
-                RightPos = RightPos - 22;
-            }
-
-            if (RightPos < 22)
-            {
-                RightPos = 22;
-                Forward_B.Enabled = false;
-            }
-
-            LeftPos = RightPos - 22;
-
-            if (LeftPos <= 0)
-            {
-                LeftPos = 0;
-
-                Back_B.Enabled = false;
-            }
-
-            if (SystemArgs.Positions.Count > 22)
-            {
-                Forward_B.Enabled = true;
-            }
-
-            ShowCurrentPositions();
-        }
-
-        #endregion
-
         #region Сортировка
         private void Headers_DGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -438,7 +340,6 @@ namespace InfoAboutPass
 
             if (e.ColumnIndex == 0)
             {
-
                 if(CurrentTypeSort)
                 {
                     Headers_DGV[e.ColumnIndex, 0].Value = "Дата добавления ↑";
@@ -453,6 +354,7 @@ namespace InfoAboutPass
                 Headers_DGV[3, 0].Value = "Наименование | Описание";
 
                 Sort.ByDate(CurrentTypeSort);
+
 
                 SystemArgs.PrintLog($"Сортировака по дате выполнена");
             }
@@ -472,6 +374,7 @@ namespace InfoAboutPass
                 Headers_DGV[3, 0].Value = "Наименование | Описание";
 
                 Sort.ByName(CurrentTypeSort);
+
 
                 SystemArgs.PrintLog($"Сортировака по логину выполнена");
             }
@@ -514,7 +417,7 @@ namespace InfoAboutPass
                 SystemArgs.PrintLog($"Сортировака по описанию выполнена");
             }
 
-            ToStartPos();
+            ShowCurrentPositions(SystemArgs.Positions);
         }
         #endregion
 
@@ -530,8 +433,6 @@ namespace InfoAboutPass
                 return;
             }
 
-            SystemArgs.IndexRow_Change = Positions_DGV.CurrentCell.RowIndex;
-
             if (SystemArgs.SelectionMode)
             {
                 Positions_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect; //Выделение строки
@@ -542,8 +443,69 @@ namespace InfoAboutPass
                 Clipboard.SetText(Positions_DGV[Positions_DGV.CurrentCell.ColumnIndex, Positions_DGV.CurrentCell.RowIndex].Value.ToString()); //Копирование по клику
             }
 
-            Change_B.Enabled = true;
-            Delete_B.Enabled = true;
+            if(SystemArgs.Positions.Count > 0)
+            {
+                Change_B.Enabled = true;
+                Delete_B.Enabled = true;
+            }
+            else
+            {
+                Change_B.Enabled = false;
+                Delete_B.Enabled = false;
+            }
+
+        }
+
+        private void ResetSearch()
+        {
+            Search_TB.Text = String.Empty;
+            ShowCurrentPositions(SystemArgs.Positions);
+            SystemArgs.Result.Clear();
+        }
+
+        private void Search_B_Click(object sender, EventArgs e)
+        {
+            String Search = Search_TB.Text.Trim();
+
+            if (Search == String.Empty)
+            {
+                ResetSearch();
+                return;
+            }
+
+            SystemArgs.Result.Clear();
+
+            foreach (Position Temp in SystemArgs.Positions)
+            {
+                if (Temp.GetSearchString().IndexOf(Search) != -1)
+                {
+                    SystemArgs.Result.Add(Temp);
+                }
+            }
+
+            if (SystemArgs.Result.Count != 0)
+            {
+                ShowCurrentPositions(SystemArgs.Result);
+
+                SystemArgs.PrintLog($"Удачное завершение поиска поиска. Результатов {SystemArgs.Result.Count}");
+            }
+            else
+            {
+                MessageOneButton Dialog = new MessageOneButton();
+
+                Dialog.Message_L.Text = "Поиск не дал результатов";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    SystemArgs.PrintLog($"Поиск не дал результатов");
+                    return;
+                }
+            }
+        }
+
+        private void ResetSearch_B_Click(object sender, EventArgs e)
+        {
+            ResetSearch();
         }
     }
 }

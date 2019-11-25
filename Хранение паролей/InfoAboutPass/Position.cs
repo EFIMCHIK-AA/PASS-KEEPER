@@ -106,5 +106,10 @@ namespace InfoAboutPass
                 }
             }
         }
+
+        public String GetSearchString()
+        {
+            return $"{_DateCreate}_{_Name}_{_Description}";
+        }
     }
 }

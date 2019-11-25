@@ -32,3 +32,38 @@ C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\Info
 C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.GridCommon.WinForms.xml
 C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Shared.Base.xml
 C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\Pass_Keeper.csproj.CopyComplete
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\Pass_Keeper.csprojAssemblyReference.cache
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.AboutProg.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.AboutUser.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.Autorization_Form.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.MainLoad.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.Main_Form.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.MessageOneButton.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.MessegeTwoButtons.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.PositionForm.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.Properties.Resources.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\InfoAboutPass.Reg_Form.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\Pass_Keeper.csproj.GenerateResource.cache
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\PASS KEEPER.exe
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\PASS KEEPER.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\PASS KEEPER.exe.config
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\PASS KEEPER.exe
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\PASS KEEPER.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\AdamsLair.WinForms.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Equin.ApplicationFramework.BindingListView.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\FastTree.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\PopupControl.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Core.WinForms.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.DataSource.WinForms.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.GridCommon.WinForms.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Shared.Base.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\AdamsLair.WinForms.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\AdamsLair.WinForms.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\FastTree.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\PopupControl.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Core.WinForms.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.DataSource.WinForms.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.GridCommon.WinForms.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\bin\Debug\Syncfusion.Shared.Base.xml
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\InfoAboutPass\obj\Debug\Pass_Keeper.csproj.CopyComplete

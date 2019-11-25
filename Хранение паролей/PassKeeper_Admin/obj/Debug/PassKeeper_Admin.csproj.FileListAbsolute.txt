@@ -32,3 +32,7 @@ C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\Pass
 C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.csproj.CopyComplete
 C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.exe
 C:\Users\dmitriy.skokov\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Debug\DataGridViewSortableBinding.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Debug\Equin.ApplicationFramework.BindingListView.dll
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.Restore_F.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.WelcomeFirst_F.resources
