@@ -62,6 +62,17 @@ namespace InfoAboutPass
                         error = "Пользовтель с таким именем уже существует";
                         throw new Exception(error);
                     }
+
+                    MessageOneButton Dialog2 = new MessageOneButton();
+
+                    Dialog2.Message_L.Text = "Пользователь успешно зарегистрирован";
+
+                    if (Dialog2.ShowDialog() == DialogResult.OK)
+                    {
+
+                    }
+
+                    SystemArgs.PrintLog($"Пользователь успешно зарегистрирован");
                 }
                 catch
                 {

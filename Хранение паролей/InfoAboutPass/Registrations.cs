@@ -80,17 +80,6 @@ namespace InfoAboutPass
                 sw.WriteLine(NameUser);
                 sw.WriteLine(Password);
             }
-
-            MessageOneButton Dialog2 = new MessageOneButton();
-
-            Dialog2.Message_L.Text = "Пользователь успешно зарегистрирован";
-
-            if (Dialog2.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-
-            SystemArgs.PrintLog($"Пользователь успешно зарегистрирован");
         }
     }
 }
