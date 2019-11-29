@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
 
 namespace InfoAboutPass
 {
@@ -113,7 +113,24 @@ namespace InfoAboutPass
             {
                 Position Temp = Operations.ToPosition(TempPositions[i]);
 
-                SystemArgs.Positions.Add(Temp);
+                if(Temp == null)
+                {
+                    MessageOneButton Dialog = new MessageOneButton();
+
+                    Dialog.Message_L.Text = "Ошибка при получени данных";
+
+                    if (Dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        SystemArgs.PrintLog($"Ошибка при получени данных");
+                    }
+
+                    SystemArgs.MainForm.Close();
+                    this.WindowState = FormWindowState.Minimized; // - морграние
+                }
+                else
+                {
+                    SystemArgs.Positions.Add(Temp);
+                }
             }
 
             SystemArgs.PrintLog($"Конвертация позиций => Успешно ");

@@ -61,11 +61,19 @@ namespace InfoAboutPass
 
         public static Position ToPosition(String Position)
         {
-            String[] Temp = Position.Split('_');// 0 - Дата, 1 - Наименование, 2 - Пароль, 3 - описание, 4 - Ключ шифрования
+            try
+            {
+                String[] Temp = Position.Split('_');// 0 - Дата, 1 - Наименование, 2 - Пароль, 3 - описание, 4 - Ключ шифрования
 
-            String DecoderPassword = Encryption.DecryptRSA(Temp[2], Temp[4]);
+                String DecoderPassword = Encryption.DecryptRSA(Temp[2], Temp[4]);
 
-            return new Position(Convert.ToDateTime(Temp[0]), Temp[1], DecoderPassword, Temp[3]); // 0 - Дата, 1 - Наименование, 2 - Пароль, 3 - описание
+                return new Position(Convert.ToDateTime(Temp[0]), Temp[1], DecoderPassword, Temp[3]); // 0 - Дата, 1 - Наименование, 2 - Пароль, 3 - описание
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
         }
     }
 }
