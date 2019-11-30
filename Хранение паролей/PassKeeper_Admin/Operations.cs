@@ -21,7 +21,7 @@ namespace PassKeeper_Admin
     {
         public static void GetUsers()
         {
-            SystemArgs.PrintLog($"Процедура получения списка пользователей => Старт ");
+            SystemArgs.PrintLog($"Процедура получения списка пользователей => Старт");
 
             String[] PathFiles;
 
@@ -53,6 +53,7 @@ namespace PassKeeper_Admin
                 }
 
                 SystemArgs.PrintLog($"Директория хранения данных пользователей не найдена");
+                Application.Exit();
             }
         }
 

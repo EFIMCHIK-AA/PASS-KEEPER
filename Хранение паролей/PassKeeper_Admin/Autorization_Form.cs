@@ -126,10 +126,6 @@ namespace PassKeeper_Admin
                     }
                 }
             }
-            else
-            {
-
-            }
         }
 
         private void SeePass_CB_CheckedChanged(object sender, EventArgs e)
