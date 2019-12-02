@@ -92,7 +92,7 @@
             this.Description_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Description_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.Description_TB.Location = new System.Drawing.Point(14, 195);
-            this.Description_TB.MaxLength = 28;
+            this.Description_TB.MaxLength = 200;
             this.Description_TB.Multiline = true;
             this.Description_TB.Name = "Description_TB";
             this.Description_TB.Size = new System.Drawing.Size(334, 86);
@@ -117,7 +117,7 @@
             this.Pass_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Pass_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.Pass_TB.Location = new System.Drawing.Point(128, 121);
-            this.Pass_TB.MaxLength = 20;
+            this.Pass_TB.MaxLength = 100;
             this.Pass_TB.Name = "Pass_TB";
             this.Pass_TB.Size = new System.Drawing.Size(220, 23);
             this.Pass_TB.TabIndex = 3;
@@ -154,7 +154,7 @@
             this.Name_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Name_TB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.Name_TB.Location = new System.Drawing.Point(128, 95);
-            this.Name_TB.MaxLength = 20;
+            this.Name_TB.MaxLength = 100;
             this.Name_TB.Name = "Name_TB";
             this.Name_TB.Size = new System.Drawing.Size(220, 23);
             this.Name_TB.TabIndex = 2;

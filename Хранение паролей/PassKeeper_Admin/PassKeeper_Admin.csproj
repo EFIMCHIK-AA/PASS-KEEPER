@@ -7,7 +7,7 @@
     <ProjectGuid>{508AB09D-B8D6-45B5-B850-B43A276D1089}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PassKeeper_Admin</RootNamespace>
-    <AssemblyName>PassKeeper_Admin</AssemblyName>
+    <AssemblyName>PASS-KEEPER ADMIN</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DataGridViewSortableBinding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b24ffdddc84bbf59, processorArchitecture=MSIL">
@@ -229,6 +232,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WelcomeFinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

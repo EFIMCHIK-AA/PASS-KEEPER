@@ -149,15 +149,13 @@ namespace PassKeeper_Admin
                     if (Directory.Exists($@"{SystemPath.DataUSers}\{OldUser.Name}"))
                     {
                         Flag = true;
+                        break;
                     }
                 }
 
                 if (Flag)
                 {
-                    if(NewUser.Name != OldUser.Name)
-                    {
-                        Directory.Move($@"{SystemPath.DataUSers}\{OldUser.Name}", $@"{SystemPath.DataUSers}\{NewUser.Name}");
-                    }
+                    Directory.Move($@"{SystemPath.DataUSers}\{OldUser.Name}", $@"{SystemPath.DataUSers}\{NewUser.Name}");
                 }
                 else
                 {

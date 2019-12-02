@@ -181,7 +181,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PassKeeper_Admin.Properties.Resources.CreatePath2;
-            this.ClientSize = new System.Drawing.Size(580, 424);
+            this.ClientSize = new System.Drawing.Size(580, 441);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Question_TB);
             this.Controls.Add(this.button2);

@@ -33,13 +33,8 @@ namespace PassKeeper_Admin
         private void Main_F_Load(object sender, EventArgs e)
         {
             FirstRowDGV();
-             
-            SystemPath.GetEntrance();
 
-
-            SystemPath.GetDataLogPath();
-            SystemPath.GetDataRegPath();
-            SystemPath.GetDataUsersPath();
+            SystemPath.CheckFiles();
             Operations.GetUsers();
 
             Show(SystemArgs.Users);

@@ -17,6 +17,9 @@ namespace PassKeeper_Admin
             InitializeComponent();
         }
 
+        String Name = String.Empty;
+
+
         private void SeePass_CB_CheckedChanged(object sender, EventArgs e)
         {
             if(Pass_TB.UseSystemPasswordChar)
@@ -31,6 +34,7 @@ namespace PassKeeper_Admin
 
         private void PositionForm_Load(object sender, EventArgs e)
         {
+            Name = Name_TB.Text.Trim(); ;
             Pass_TB.UseSystemPasswordChar = true;
         }
 
@@ -48,6 +52,13 @@ namespace PassKeeper_Admin
                         error = "Необходимо ввести наименование позиции";
                         throw new Exception(error);
                     }
+
+                    if(Name_TB.Text.Trim().ToLower() == Name.ToLower())
+                    {
+                        Name_TB.Focus();
+                        error = "Исходное и конечное имена пользователя одинаковы";
+                        throw new Exception(error);
+                    }               
 
                     if (Pass_TB.Text.Trim() == String.Empty)
                     {

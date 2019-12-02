@@ -27,15 +27,6 @@ namespace InfoAboutPass
         {
             SystemArgs.PrintLog($"Инициализация процедуры изменения позиции");
 
-            for (Int32 i = 0; i < SystemArgs.Positions.Count; i++)
-            {
-                if (SystemArgs.Positions[i].DateCreate.ToString() == Positions_DGV[0, Positions_DGV.CurrentCell.RowIndex].Value.ToString())
-                {
-                    SystemArgs.IndexRow_Change = i;
-                    break;
-                }
-            }
-
             PositionForm Dialog = new PositionForm
             {
                 BackgroundImage = Properties.Resources.PositionChange           
@@ -43,7 +34,7 @@ namespace InfoAboutPass
 
             DataFile.CurrentDateFile = DateTime.Now;
 
-            Position LastPosition = SystemArgs.Positions[SystemArgs.IndexRow_Change];
+            Position LastPosition = SystemArgs.Positions[Positions_DGV.CurrentCell.RowIndex];
 
             Dialog.CurrentDate_TB.Text = LastPosition.DateCreate.ToString();
             Dialog.Name_TB.Text = LastPosition.Name;
@@ -117,7 +108,7 @@ namespace InfoAboutPass
                 {
                     MessageOneButton Dialog = new MessageOneButton();
 
-                    Dialog.Message_L.Text = "Ошибка при получени данных";
+                    Dialog.Message_L.Text = "Ошибка при получени данных. Выход из приложения";
 
                     if (Dialog.ShowDialog() == DialogResult.OK)
                     {
@@ -289,24 +280,15 @@ namespace InfoAboutPass
         {
             SystemArgs.PrintLog($"Инициализация процедуры удаления позиции");
 
-            for (Int32 i = 0; i < SystemArgs.Positions.Count; i++)
-            {
-                if (SystemArgs.Positions[i].DateCreate.ToString() == Positions_DGV[0, Positions_DGV.CurrentCell.RowIndex].Value.ToString())
-                {
-                    SystemArgs.IndexRow_Change = i;
-                    break;
-                }
-            }
-
             MessegeTwoButtons Dialog = new MessegeTwoButtons();
 
             Dialog.Message_L.Text = "Вы действиельно хотите удалить эту позицию?";
 
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
-                DataFile.RemovePosition(SystemArgs.Positions[SystemArgs.IndexRow_Change]);
+                DataFile.RemovePosition(SystemArgs.Positions[Positions_DGV.CurrentCell.RowIndex]);
 
-                SystemArgs.Positions.RemoveAt(SystemArgs.IndexRow_Change);
+                SystemArgs.Positions.RemoveAt(Positions_DGV.CurrentCell.RowIndex);
 
                 ShowCurrentPositions(SystemArgs.Positions);
 

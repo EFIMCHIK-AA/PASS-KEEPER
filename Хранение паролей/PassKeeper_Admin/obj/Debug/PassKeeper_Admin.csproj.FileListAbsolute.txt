@@ -1,6 +1,3 @@
-C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Debug\PassKeeper_Admin.exe.config
-C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Debug\PassKeeper_Admin.exe
-C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Debug\PassKeeper_Admin.pdb
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Debug\MaterialSkin.dll
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.csprojAssemblyReference.cache
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.Autorization_Form.resources
@@ -10,8 +7,6 @@ C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Adm
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.Question_F.resources
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.csproj.GenerateResource.cache
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.csproj.CopyComplete
-C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.exe
-C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.pdb
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.MessageOneButton_F.resources
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.MessegeTwoButtons_F.resources
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.User_F.resources
@@ -36,3 +31,8 @@ C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Adm
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Debug\Equin.ApplicationFramework.BindingListView.dll
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.Restore_F.resources
 C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PassKeeper_Admin.WelcomeFirst_F.resources
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Debug\PASS-KEEPER ADMIN.exe.config
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Debug\PASS-KEEPER ADMIN.exe
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\bin\Debug\PASS-KEEPER ADMIN.pdb
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PASS-KEEPER ADMIN.exe
+C:\Users\Unix\Desktop\PASS-KEEPER\Хранение паролей\PassKeeper_Admin\obj\Debug\PASS-KEEPER ADMIN.pdb

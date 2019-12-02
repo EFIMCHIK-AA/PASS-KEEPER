@@ -1,9 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PassKeeper_Admin
@@ -164,7 +160,7 @@ namespace PassKeeper_Admin
             {
                 WelcomeFirst_F DialogW = new WelcomeFirst_F();
 
-                if(DialogW.ShowDialog() == DialogResult.OK)
+                if (DialogW.ShowDialog() == DialogResult.OK)
                 {
                     SystemArgs.PrintLog($"Инциализация процедуры настройки программы");
                 }
@@ -232,9 +228,9 @@ namespace PassKeeper_Admin
             {
                 Autorization_Form Dialog = new Autorization_Form();
 
-                if(Dialog.ShowDialog() == DialogResult.OK)
+                if (Dialog.ShowDialog() == DialogResult.OK)
                 {
-                    
+
                 }
             }
         }
@@ -319,7 +315,7 @@ namespace PassKeeper_Admin
                     String KeyA = Encryption.GetKeyEncryption();
 
                     sr.WriteLine($"{Encryption.EncryptRSA(Question, KeyQ)}_{KeyQ}");
-                    sr.WriteLine($"{Encryption.EncryptRSA(Answer,KeyA)}_{KeyA}");
+                    sr.WriteLine($"{Encryption.EncryptRSA(Answer, KeyA)}_{KeyA}");
                 }
             }
             else
@@ -339,7 +335,7 @@ namespace PassKeeper_Admin
             }
         }
 
-        public static String [] GetAnswer(String Question, String Answer)
+        public static String[] GetAnswer(String Question, String Answer)
         {
             if (File.Exists(AnswerPath))
             {
@@ -351,7 +347,7 @@ namespace PassKeeper_Admin
                     SplitRSA = sw.ReadLine().Split('_');
                     String DecryptAnswerRSA = $"{Encryption.DecryptRSA(SplitRSA[0], SplitRSA[1])}";
 
-                    return new String[2] {DecryptQuestionRSA, DecryptAnswerRSA };
+                    return new String[2] { DecryptQuestionRSA, DecryptAnswerRSA };
                 }
             }
             else
@@ -420,6 +416,65 @@ namespace PassKeeper_Admin
                 SystemArgs.PrintLog($"Файл Password.conf не найден");
 
                 return null;
+            }
+        }
+
+        public static void CheckFiles()
+        {
+            try
+            {
+                SystemArgs.PrintLog($"Запуск приложения");
+
+                if (!File.Exists(SystemPath.DataRegPath))
+                {
+                    throw new Exception();
+                }
+
+                if (!File.Exists(SystemPath.DataUSersPath))
+                {
+                    throw new Exception();
+                }
+
+                if (!File.Exists(SystemPath.DataLogPath))
+                {
+                    throw new Exception();
+                }
+
+                SystemPath.GetDataRegPath();
+                SystemPath.GetDataLogPath();
+                SystemPath.GetDataUsersPath();
+                SystemPath.GetEntrance();
+
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                Dialog.Message_L.Text = "Недостаточно прав для доступа к системным файлам";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Недостаточно прав доступа для корректного запуска программного обеспечения");
+
+                Application.Exit();
+            }
+            catch (Exception)
+            {
+                MessageOneButton_F Dialog = new MessageOneButton_F();
+
+                Dialog.Message_L.Text = "Файл конфигурации не найден. Выход из приложения";
+
+                if (Dialog.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+
+                SystemArgs.PrintLog($"Файл конфигурации не найден");
+
+                Application.Exit();
             }
         }
     }
