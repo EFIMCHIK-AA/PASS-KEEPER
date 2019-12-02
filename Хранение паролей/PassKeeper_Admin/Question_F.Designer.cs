@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Question_F));
             this.label3 = new System.Windows.Forms.Label();
             this.Answer_TB = new System.Windows.Forms.TextBox();
             this.OK_B = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.Question_TB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -71,9 +73,9 @@
             this.OK_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OK_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.OK_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.OK_B.Location = new System.Drawing.Point(23, 384);
+            this.OK_B.Location = new System.Drawing.Point(23, 387);
             this.OK_B.Name = "OK_B";
-            this.OK_B.Size = new System.Drawing.Size(535, 25);
+            this.OK_B.Size = new System.Drawing.Size(264, 25);
             this.OK_B.TabIndex = 21;
             this.OK_B.Text = "Подтвердить";
             this.OK_B.UseVisualStyleBackColor = false;
@@ -176,12 +178,28 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "Подсказка";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.button3.Location = new System.Drawing.Point(293, 387);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(264, 25);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "Отмена";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Question_F
             // 
+            this.AcceptButton = this.OK_B;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PassKeeper_Admin.Properties.Resources.CreatePath2;
             this.ClientSize = new System.Drawing.Size(580, 441);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Question_TB);
             this.Controls.Add(this.button2);
@@ -194,11 +212,11 @@
             this.Controls.Add(this.Answer_TB);
             this.Controls.Add(this.OK_B);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Question_F";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Question_F";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Question_F_FormClosing);
@@ -221,5 +239,6 @@
         public System.Windows.Forms.Button button2;
         public System.Windows.Forms.TextBox Question_TB;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Button button3;
     }
 }

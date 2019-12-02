@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeFirst_F));
             this.Cancel_B = new System.Windows.Forms.Button();
             this.OK_B = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -69,6 +70,7 @@
             this.Controls.Add(this.Cancel_B);
             this.Controls.Add(this.OK_B);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WelcomeFirst_F";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WelcomeFirst_F";

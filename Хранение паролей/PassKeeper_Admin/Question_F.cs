@@ -51,7 +51,7 @@ namespace PassKeeper_Admin
                 {
                     MessageOneButton_F Dialog = new MessageOneButton_F();
 
-                    Dialog.Message_L.Text = "Необходимо указать путь к директории Reg";
+                    Dialog.Message_L.Text = "Необходимо указать путь к директории регистрации";
 
                     if (Dialog.ShowDialog() == DialogResult.OK)
                     {
@@ -65,7 +65,7 @@ namespace PassKeeper_Admin
                 {
                     MessageOneButton_F Dialog = new MessageOneButton_F();
 
-                    Dialog.Message_L.Text = "Необходимо указать путь к директории Files";
+                    Dialog.Message_L.Text = "Необходимо указать путь к директории данных";
 
                     if (Dialog.ShowDialog() == DialogResult.OK)
                     {
@@ -167,6 +167,18 @@ namespace PassKeeper_Admin
             base.Capture = false;
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             this.WndProc(ref m);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessegeTwoButtons_F Dialog = new MessegeTwoButtons_F();
+
+            Dialog.Message_L.Text = "Вы действительно хотите отменить изменения?";
+
+            if (Dialog.ShowDialog() == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePass_F));
             this.label3 = new System.Windows.Forms.Label();
             this.Password_TB = new System.Windows.Forms.TextBox();
             this.OK_B = new System.Windows.Forms.Button();
@@ -75,7 +76,6 @@
             // Cancel_B
             // 
             this.Cancel_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.Cancel_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cancel_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Cancel_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
@@ -89,6 +89,7 @@
             // 
             // CreatePass_F
             // 
+            this.AcceptButton = this.OK_B;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PassKeeper_Admin.Properties.Resources.CreatePass3;
@@ -98,11 +99,11 @@
             this.Controls.Add(this.Password_TB);
             this.Controls.Add(this.OK_B);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CreatePass_F";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreatePass_F";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreatePass_F_FormClosing);

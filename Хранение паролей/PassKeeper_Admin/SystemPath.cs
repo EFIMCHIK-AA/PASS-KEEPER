@@ -175,22 +175,12 @@ namespace PassKeeper_Admin
 
                 if (DialogQ.ShowDialog() == DialogResult.OK)
                 {
-                    SystemArgs.PrintLog($"Пути указаны");
+                    SystemArgs.PrintLog($"Пути успешно указаны");
                 }
                 else
                 {
-                    MessageOneButton_F Dialog = new MessageOneButton_F();
-
-                    Dialog.Message_L.Text = "Необходмо установить данные восстановления";
-
-                    if (Dialog.ShowDialog() == DialogResult.OK)
-                    {
-
-                    }
-
-                    SystemArgs.PrintLog($"Необходмо установить данные восстановления");
-
                     Application.Exit();
+                    return;
                 }
 
                 CreatePass_F DialogP = new CreatePass_F();
@@ -205,17 +195,8 @@ namespace PassKeeper_Admin
                 }
                 else
                 {
-                    MessageOneButton_F Dialog = new MessageOneButton_F();
-
-                    Dialog.Message_L.Text = "Необходмо установить данные восстановления";
-
-                    if (Dialog.ShowDialog() == DialogResult.OK)
-                    {
-
-                    }
-
-                    SystemArgs.PrintLog($"Необходмо установить данные восстановления");
                     Application.Exit();
+                    return;
                 }
 
                 SystemPath.SetEntrance(false);

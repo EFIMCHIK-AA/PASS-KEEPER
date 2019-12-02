@@ -155,7 +155,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "User_F";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добаление позиции";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PositionForm_FormClosing);

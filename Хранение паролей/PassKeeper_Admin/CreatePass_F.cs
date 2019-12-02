@@ -77,7 +77,14 @@ namespace PassKeeper_Admin
 
         private void Cancel_B_Click(object sender, EventArgs e)
         {
+            MessegeTwoButtons_F Dialog = new MessegeTwoButtons_F();
 
+            Dialog.Message_L.Text = "Вы действительно хотите отменить изменения?";
+
+            if (Dialog.ShowDialog() == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
 
         private void CreatePass_F_MouseMove(object sender, MouseEventArgs e)

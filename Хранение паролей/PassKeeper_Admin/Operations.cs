@@ -33,11 +33,14 @@ namespace PassKeeper_Admin
                 {
                     String DirectoryName = new FileInfo(PathFiles[i]).Name;
 
-                    using (StreamReader sr = new StreamReader(File.Open($@"{PathFiles[i]}\{DirectoryName}.hba", FileMode.Open)))
+                    if(File.Exists($@"{PathFiles[i]}\{DirectoryName}.hba"))
                     {
-                        String UserName = sr.ReadLine();
-                        String Password = sr.ReadLine();
-                        SystemArgs.Users.Add(new User(UserName, Password));
+                        using (StreamReader sr = new StreamReader(File.Open($@"{PathFiles[i]}\{DirectoryName}.hba", FileMode.Open)))
+                        {
+                            String UserName = sr.ReadLine();
+                            String Password = sr.ReadLine();
+                            SystemArgs.Users.Add(new User(UserName, Password));
+                        }
                     }
                 }
             }
