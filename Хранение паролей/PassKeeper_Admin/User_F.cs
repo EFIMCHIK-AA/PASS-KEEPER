@@ -53,12 +53,12 @@ namespace PassKeeper_Admin
                         throw new Exception(error);
                     }
 
-                    if(Name_TB.Text.Trim().ToLower() == Name.ToLower())
-                    {
-                        Name_TB.Focus();
-                        error = "Исходное и конечное имена пользователя одинаковы";
-                        throw new Exception(error);
-                    }               
+                    //if(Name_TB.Text.Trim().ToLower() == Name.ToLower())
+                    //{
+                    //    Name_TB.Focus();
+                    //    error = "Исходное и конечное имена пользователя одинаковы";
+                    //    throw new Exception(error);
+                    //}               
 
                     if (Pass_TB.Text.Trim() == String.Empty)
                     {

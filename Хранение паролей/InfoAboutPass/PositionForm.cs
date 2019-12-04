@@ -55,6 +55,20 @@ namespace InfoAboutPass
                         error = "Необходимо ввеситм пароль позиции";
                         throw new Exception(error);
                     }
+
+                    if(Name_TB.Text.Trim().IndexOf("_") != -1)
+                    {
+                        Name_TB.Focus();
+                        error = "Символ '_' не допустим";
+                        throw new Exception(error);
+                    }
+
+                    if (Pass_TB.Text.Trim().IndexOf("_") != -1)
+                    {
+                        Pass_TB.Focus();
+                        error = "Символ '_' не допустим";
+                        throw new Exception(error);
+                    }
                 }
                 catch
                 {

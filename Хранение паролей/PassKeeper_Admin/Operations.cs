@@ -149,7 +149,7 @@ namespace PassKeeper_Admin
 
                 for (Int32 i = 0; i < PathFiles.Length; i++)
                 {
-                    if (Directory.Exists($@"{SystemPath.DataUSers}\{OldUser.Name}"))
+                    if ($@"{SystemPath.DataUSers}\{OldUser.Name}" == PathFiles[i])
                     {
                         Flag = true;
                         break;
@@ -158,7 +158,26 @@ namespace PassKeeper_Admin
 
                 if (Flag)
                 {
-                    Directory.Move($@"{SystemPath.DataUSers}\{OldUser.Name}", $@"{SystemPath.DataUSers}\{NewUser.Name}");
+                    Directory.CreateDirectory($@"Temp");
+
+                    foreach (string newPath in Directory.GetFiles($@"{SystemPath.DataUSers}\{OldUser.Name}", "*.*", SearchOption.AllDirectories))
+                    {
+                        string[] fName = newPath.Split('\\');
+
+                        File.Copy(newPath, $@"Temp\{fName[4]}", true);
+                    }
+
+                    Directory.Delete($@"{SystemPath.DataUSers}\{OldUser.Name}", true);
+                    Directory.CreateDirectory($@"{SystemPath.DataUSers}\{NewUser.Name}");
+
+                    foreach (string newPath in Directory.GetFiles($@"Temp", "*.*", SearchOption.AllDirectories))
+                    {
+                        string[] fName = newPath.Split('\\');
+
+                        File.Copy(newPath, $@"{SystemPath.DataUSers}\{NewUser.Name}\{fName[1]}", true);
+                    }
+
+                    Directory.Delete($@"Temp", true);
                 }
                 else
                 {
