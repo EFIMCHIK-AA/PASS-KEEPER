@@ -57,6 +57,12 @@ namespace InfoAboutPass
                 Directory.CreateDirectory($@"{SystemPath.DataReg}\{NameUser}");
                 Directory.CreateDirectory($@"{SystemPath.DataUSers}\{NameUser}");
 
+                using (StreamWriter sw = new StreamWriter(File.Create($@"{SystemPath.DataReg}\{NameUser}\{NameUser}.hba")))
+                {
+                    sw.WriteLine(NameUser);
+                    sw.WriteLine(Password);
+                }
+
                 SystemArgs.PrintLog($"Директория пользователя {SystemArgs.CurrentUser} создана");
             }
             else
@@ -75,11 +81,7 @@ namespace InfoAboutPass
                 return;
             }
 
-            using (StreamWriter sw = new StreamWriter(File.Create($@"{SystemPath.DataReg}\{NameUser}\{NameUser}.hba")))
-            {
-                sw.WriteLine(NameUser);
-                sw.WriteLine(Password);
-            }
+
         }
     }
 }

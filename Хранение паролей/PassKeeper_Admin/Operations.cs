@@ -164,7 +164,7 @@ namespace PassKeeper_Admin
                     {
                         string[] fName = newPath.Split('\\');
 
-                        File.Copy(newPath, $@"Temp\{fName[4]}", true);
+                        File.Copy(newPath, $@"Temp\{fName[fName.Length - 1]}", true);
                     }
 
                     Directory.Delete($@"{SystemPath.DataUSers}\{OldUser.Name}", true);

@@ -149,7 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BackgroundImage = global::InfoAboutPass.Properties.Resources.Авторизация;
-            this.ClientSize = new System.Drawing.Size(360, 600);
+            this.ClientSize = new System.Drawing.Size(361, 566);
             this.Controls.Add(this.SeePass_CB);
             this.Controls.Add(this.Exit_B);
             this.Controls.Add(this.label3);

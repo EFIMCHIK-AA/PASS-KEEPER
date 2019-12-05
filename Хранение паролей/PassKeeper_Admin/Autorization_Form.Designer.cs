@@ -69,7 +69,6 @@
             // Exit_B
             // 
             this.Exit_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.Exit_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Exit_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.Exit_B.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));

@@ -146,6 +146,21 @@ namespace InfoAboutPass
                 SystemPath.GetDataLogPath();
                 SystemPath.GetDataUsersPath();
 
+                if (!Directory.Exists(SystemPath.DataLog))
+                {
+                    throw new Exception();
+                }
+
+                if (!Directory.Exists(SystemPath.DataReg))
+                {
+                    throw new Exception();
+                }
+
+                if (!Directory.Exists(SystemPath.DataUSers))
+                {
+                    throw new Exception();
+                }
+
             }
             catch (UnauthorizedAccessException)
             {
@@ -158,7 +173,7 @@ namespace InfoAboutPass
 
                 }
 
-                SystemArgs.PrintLog($"Недостаточно прав доступа для корректного запуска программного обеспечения");
+                SystemArgs.PrintLog($"Недостаточно прав доступа для запуска ПО");
 
                 Environment.Exit(0); //Завершение процесса
             }
@@ -166,7 +181,7 @@ namespace InfoAboutPass
             {
                 MessageOneButton Dialog = new MessageOneButton();
 
-                Dialog.Message_L.Text = "Файл конфигурации не найден. Выход из приложения";
+                Dialog.Message_L.Text = "Ошибка при получении путей конфигурации";
 
                 if (Dialog.ShowDialog() == DialogResult.OK)
                 {
